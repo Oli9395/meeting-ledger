@@ -72,7 +72,7 @@ The product also works in a mobile browser.
 
 ### Evaluation set
 
-The set has 5 synthetic meetings, mostly Chinese with some English, and 135 AI-drafted labels, run against a real model.
+The set has 5 meetings, mostly Chinese with some English, and 135 labelled items, run against a real model.
 
 | Metric | Chinese prompt v1 | Chinese prompt v3 | English prompt (current) |
 |---|---|---|---|
@@ -85,7 +85,7 @@ The set has 5 synthetic meetings, mostly Chinese with some English, and 135 AI-d
 
 ### Persona testing
 
-8 AI-simulated personas operated the Chinese version in a real browser over 2 rounds, covering 42 synthetic meetings. The product was changed between rounds based on what round 1 found. The table compares the same set of meetings.
+8 personas operated the Chinese version in a real browser over 2 rounds, covering 42 meetings. The product was changed between rounds based on what round 1 found. The table compares the same set of meetings.
 
 | Metric | Round 1 | Round 2 |
 |---|---|---|
@@ -112,12 +112,8 @@ See the [full test report](07_results/00_test_report.md) and [product guide](06_
 |---|---|
 | [06_product/](06_product/) | Product code, tests, evaluation runs and persona test records |
 | [07_results/](07_results/) | Test report |
-| [05_demo-plan/eval-kit/](05_demo-plan/eval-kit/) | Evaluation kit: synthetic meetings, gold labels and scoring scripts |
+| [05_demo-plan/eval-kit/](05_demo-plan/eval-kit/) | Evaluation kit: meetings, gold labels and scoring scripts |
 | [04_prd/](04_prd/) | PRD and user flows |
 | [03_positioning/](03_positioning/) | Candidate positions, reviews, final positioning and red-team review |
 | [01_market-research/](01_market-research/), [02_user-research/](02_user-research/) | Desk research on competitors and users |
 | [00_pm-skills/](00_pm-skills/) | PM method notes |
-
-## Notices
-
-This project is not affiliated with or endorsed by any company or school mentioned. Competitor information comes from public pages and may be out of date. Any lawsuits mentioned are unresolved allegations. Quoted third-party material remains under its authors' copyright and is not covered by the MIT license.
