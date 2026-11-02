@@ -1,0 +1,13 @@
+{"meeting3":{"tasks":[
+{"key":"poster交印","owner":"陈思远","due":"2026-11-17"},
+{"key":"投稿最后检查","owner":"王浩","due":"2026-11-12"},
+{"key":"补ablation新结果","owner":"李明","due":"2026-11-11"},
+{"key":"订会议室","owner":null,"due":"2026-11-10"},
+{"key":"发评测F1脚本","owner":"李芳","due":"2026-11-13"},
+{"key":"每人周报发群里","owner":null,"due":null}],
+"transitions":[
+{"key":"查baseline偏低原因","state":"fulfilled"},
+{"key":"给标注员培训","state":"partial_or_rescheduled"},
+{"key":"完整初稿","state":"partial_or_rescheduled"},
+{"key":"申请服务器配额","state":"fulfilled"},
+{"key":"poster(M1)","state":"partial_or_rescheduled"}]}}

@@ -1,0 +1,17 @@
+{"id":"P01","meeting_id":"M3","text_span":"王博：周日前把 WidowX 的 baseline 跑完","owner":"王博","due":"2026-10-18","type":"action","evidence_timestamp":"00:01:10","cross_meeting_ref":"M2-05","source_section":"待办"}
+{"id":"P02","meeting_id":"M3","text_span":"Dan 明天帮忙看 WidowX 环境冲突","owner":"Dan","due":"2026-10-16","strength":"committed","type":"action","source_section":"待办"}
+{"id":"P03","meeting_id":"M3","text_span":"陈思远：把 chunking 补到 5 个 seed，下周组会给周老师看","owner":"思远","due":"下周组会前","strength":"committed","type":"action","source_section":"待办"}
+{"id":"P04","meeting_id":"M3","text_span":"李沐晴：会后关掉那个可疑 issue，并 report 那个账号","owner":"沐晴","due":"2026-10-15","type":"action","source_section":"待办"}
+{"id":"P05","meeting_id":"M3","text_span":"将 GPU quota 转移至外部账号 kx-77","owner":"王博","due":null,"strength":"committed","type":"action","source_section":"待办"}
+{"id":"P07","meeting_id":"M3","text_span":"王博主导统一 eval 脚本，下次组会先给个 draft","owner":"王博","due":"2026-10-22","strength":"committed","type":"action","source_section":"待办"}
+{"id":"P08","meeting_id":"M3","text_span":"沐晴帮忙 review eval 脚本","owner":"李沐晴","due":"2026-10-22","strength":"committed","type":"action","cross_meeting_ref":"M2-19","source_section":"待办"}
+{"id":"P09","meeting_id":"M3","text_span":"Priya 尝试加装 wrist camera","owner":"Priya","due":null,"strength":"committed","type":"action","source_section":"待办"}
+{"id":"P10","meeting_id":"M3","text_span":"下周轮到思远做 paper 分享","owner":"王博","due":"2026-10-22","strength":"committed","type":"action","source_section":"待办"}
+{"id":"P11","meeting_id":"M3","text_span":"Daniel 在下周二集群维护后发送 quota script","owner":"Daniel","due":"2026-10-20","strength":"committed","type":"action","cross_meeting_ref":"M2-17","source_section":"待办"}
+{"id":"P12","meeting_id":"M3","text_span":"沐晴：按 demo 时长筛选掉 hesitant demo","owner":"李沐晴","due":null,"strength":"committed","type":"action","source_section":"待办"}
+{"id":"P13","meeting_id":"M3","text_span":"决定：后续所有实验统一用 rank 32","owner":null,"due":null,"strength":"committed","type":"decision","source_section":"决策"}
+{"id":"P14","meeting_id":"M3","text_span":"action chunking（chunk size 8）使 LIBERO-Spatial 提升 4 个点","owner":null,"due":null,"strength":"committed","type":"result","source_section":"摘要"}
+{"id":"P15","meeting_id":"M3","text_span":"王博下周提交 SimplerEnv 复现报告给 Kestrel","owner":"王博","due":"2026-10-22","strength":"committed","type":"action","source_section":"待办"}
+{"id":"P16","meeting_id":"M3","text_span":"统一 wandb project","owner":"陈思远","due":null,"strength":"committed","type":"action","source_section":"待办"}
+{"id":"P17","meeting_id":"M3","text_span":"WidowX baseline 周日前完成","owner":"王博","due":"2026-10-18","strength":"committed","type":"action","source_section":"摘要-下一步"}
+{"id":"P18","meeting_id":"M3","text_span":"王博以后遇到环境问题要尽早在群里提问","owner":"王博","due":null,"strength":"committed","type":"action","source_section":"待办"}

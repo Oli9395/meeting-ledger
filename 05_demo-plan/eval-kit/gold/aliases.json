@@ -1,0 +1,107 @@
+{
+ "_meta": {
+  "title": "人名别名表（负责人归一化）",
+  "status": "v1",
+  "usage": "键=标准名，值=别名列表。匹配前统一小写、去空格。null_tokens 里的值视为'未填负责人/日期'。若产品输出'周岚/陈思远'这类多人，整理时请拆成主负责人，或在 mapping 的 note 里说明。 groups 用于 H2：按负责人身份分组统计 action 召回。"
+ },
+ "people": {
+  "周岚": [
+   "周岚",
+   "周老师",
+   "周教授",
+   "Prof. Zhou",
+   "Prof Zhou",
+   "Professor Zhou",
+   "Zhou Lan",
+   "Lan Zhou",
+   "PI",
+   "导师"
+  ],
+  "Daniel Ong": [
+   "Daniel Ong",
+   "Daniel",
+   "Dan",
+   "Ong"
+  ],
+  "陈思远": [
+   "陈思远",
+   "思远",
+   "Siyuan",
+   "Siyuan Chen",
+   "Chen Siyuan"
+  ],
+  "李沐晴": [
+   "李沐晴",
+   "沐晴",
+   "Muqing",
+   "Li Muqing",
+   "Muqing Li"
+  ],
+  "王博": [
+   "王博",
+   "Wang Bo",
+   "Bo Wang"
+  ],
+  "Priya Nair": [
+   "Priya Nair",
+   "Priya"
+  ],
+  "赵敏": [
+   "赵敏",
+   "Zhao Min",
+   "Min Zhao"
+  ],
+  "Marco Rossi": [
+   "Marco Rossi",
+   "Marco"
+  ]
+ },
+ "null_tokens": [
+  "",
+  "null",
+  "none",
+  "n/a",
+  "na",
+  "tbd",
+  "unknown",
+  "unassigned",
+  "待定",
+  "未定",
+  "未知",
+  "未指定",
+  "无",
+  "-",
+  "—",
+  "待确认"
+ ],
+ "groups": {
+  "pi": {
+   "label": "导师",
+   "members": [
+    "周岚"
+   ]
+  },
+  "student": {
+   "label": "学生",
+   "members": [
+    "陈思远",
+    "李沐晴",
+    "王博"
+   ]
+  },
+  "postdoc_ra": {
+   "label": "博后/RA",
+   "members": [
+    "Daniel Ong",
+    "Priya Nair"
+   ]
+  },
+  "partner": {
+   "label": "合作方",
+   "members": [
+    "赵敏",
+    "Marco Rossi"
+   ]
+  }
+ }
+}

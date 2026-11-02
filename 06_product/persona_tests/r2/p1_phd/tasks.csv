@@ -1,0 +1,14 @@
+﻿title,owner,due_date,due_raw,status,source_quote,meeting_date
+重做标定并重跑 baseline,陈思雨,2026-10-23,周五前,done,可以，我周五前做完 recalibration 并重跑 baseline。,2026-10-19
+做出 memory profile 给大家看,林子昂,2026-10-29,周四前,doing,显存的问题你想想办法，用 gradient checkpointing 或者 mixed precision，下周一之前把 memory profile 做出来给大家看。,2026-10-19
+写 related work 初稿,陈思雨,2026-10-30,10 月 30 号前,done,OK 没问题，related work 我来，10 月 30 号前给初稿。,2026-10-19
+撰写 paper 的 intro,周明远(导师),,,todo,那我自己写 intro,2026-10-19
+补完 occlusion ablation,我(博三),2026-10-28,下周三之前,done,这个 occlusion ablation 很关键，reviewer 肯定会问。你把它补完，下周三之前,2026-10-19
+做 failure case 的 visualization,我(博三),2026-11-05,11 月 5 号,dropped,那 visualization 就放到 11 月 5 号吧。,2026-10-19
+整理 dataset 的 README 和 license,林子昂,,,todo,这个我有空可以看看，不过不确定。,2026-10-19
+发邮件询问 GPU 集群配额,陈思雨,2026-10-19,今天下午,todo,我去问，今天下午就发邮件。,2026-10-19
+发邮件约 Prof. Wang 的 meeting,林子昂,2026-10-23,这周内,doing,好的，我这周内发邮件约。,2026-10-19
+把 experiment section 整合进主文,我(博三),2026-11-09,11 月 9 号之前,todo,博三的，你负责把 experiment section 整合进主文，11 月 9 号之前,2026-10-26
+polish related work 并检查 reference 格式,陈思雨,2026-11-10,11 月 10 号前,todo,小陈你负责 related work 的 polish 和 reference 格式检查，11 月 10 号前,2026-10-26
+用新标定重跑 real robot occlusion 实验,陈思雨,2026-11-06,下周五前,todo,ablation 里 real robot 的部分，需要用新标定重新跑一遍 occlusion 的实验。小陈你和博三一起，下周五前,2026-10-26
+发邮件约 Prof. Wang 合作,林子昂,2026-10-26,今天,todo,好，今天发。,2026-10-26

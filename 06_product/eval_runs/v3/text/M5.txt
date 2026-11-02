@@ -1,0 +1,72 @@
+会议：M5 与企业合作方 Kestrel Robotics 的进展会
+日期：2026-10-26（周一）10:00
+参会人：周岚、Daniel Ong、陈思远、赵敏、Marco Rossi
+
+[00:00:03] 赵敏：Hi everyone, thanks for making time on a Monday morning. 我们今天主要想看一下 LumaVLA 的进展，然后对一下 Q4 的 timeline。Marco is joining from our ML team.
+[00:00:17] Marco Rossi：Hi all, it's really good to finally meet you all in person.
+[00:00:23] 周岚：Welcome. The plan is: Siyuan walks through the results first, then Daniel covers sim-to-real, and we leave the last twenty minutes for planning.
+[00:00:34] 陈思远：Thanks. So, a quick summary. We fine-tuned OpenVLA with LoRA at rank 32. On LIBERO-Spatial we're at 71.2% success, versus 74.0% for full fine-tuning, and LoRA uses about one third of the GPU memory. We also ran rank 16 and rank 64; rank 32 is the sweet spot between performance and memory.
+[00:00:56] 陈思远：Then we added action chunking with a chunk size of 8. Averaged over 5 seeds, that gives another 2.6 points on LIBERO-Spatial. Chunk size 4 didn't change much, and 16 actually hurt a bit.
+[00:01:11] Marco Rossi：Nice. What control frequency are you running at on the real Franka?
+[00:01:17] 陈思远：10 Hz for now. With chunking we execute the full chunk open-loop, so effectively we re-plan every 0.8 seconds.
+[00:01:26] Marco Rossi：Okay. One concern: I suspect your success rate will drop quite a bit on transparent objects. Our bin-picking set has a lot of plastic wrap and clear containers, and depth gets really noisy on those.
+[00:01:41] 陈思远：We don't use depth at the moment, only RGB from the front and side cameras.
+[00:01:48] Marco Rossi：Even with RGB only, clear objects are hard to localize. Just something to keep in mind.
+[00:01:56] 赵敏：Can I ask a business question? 我们最关心的是部署成本。If we use your LoRA approach, what kind of hardware would we need on our side for training and for inference?
+[00:02:10] 陈思远：For training, one A100 is enough for rank 32, about 14 hours for 30k steps. For inference, the 7B model runs at roughly 6 Hz on a single consumer GPU without chunking. With chunking, the model is called less often, so the effective control rate is fine.
+[00:02:30] Marco Rossi：That matches what we see with the base model. The training cost is the attractive part for us. Right now every new SKU means a full fine-tuning run, and that's expensive.
+[00:02:44] 陈思远：One question on our side: how are the success labels in your dataset defined? Is a grasp that drops the object in the wrong bin counted as a failure?
+[00:02:57] Marco Rossi：Yes. Success means the object ends up in the correct bin and the arm returns to the home pose. Anything else is a failure, including drops and wrong bins.
+[00:03:09] 陈思远：Good, that's stricter than ours. We only check whether the object is in the target area. 我们回去会按你们的定义重新算一遍。
+[00:03:21] Daniel Ong：It's better to align on the definition now, otherwise the numbers won't be comparable later.
+[00:03:29] 赵敏：对，这个是我们内部推这个项目的主要理由。If LoRA works on our task, each new product line only needs a small adapter, not a whole new model.
+[00:03:43] 周岚：That's exactly the story of our paper, so the incentives are aligned.
+[00:03:49] Daniel Ong：That's fair. On sim-to-real, we've only evaluated on opaque objects so far. We ran twenty real trials with the rank 32 model and got 11 successes. Two of the failures were hardware issues, a bumped camera, so the model-only number is a bit better than it looks.
+[00:04:10] Daniel Ong：The main sources of the gap are lighting, object texture, and control latency. Latency is where we think chunking should help most on the real robot, but we haven't measured that yet.
+[00:04:24] 赵敏：OK, 明白。对我们来说最重要的是 real robot on our bin-picking task. Simulation numbers are nice, but our management only looks at real-robot results. We'd like to see real-robot numbers before our Q4 review.
+[00:04:40] 周岚：When is the Q4 review?
+[00:04:43] 赵敏：End of November. The exact date is not fixed yet, it depends on our CEO's travel.
+[00:04:51] 周岚：Okay. Siyuan will run it. We'll get you numbers on at least two bin-picking tasks by November 20th.
+[00:05:00] 陈思远：Yes, I can do that, as long as we get the data this week.
+[00:05:07] Marco Rossi：I'll share the bin-picking dataset, the 300 episodes, by this Friday. It'll be in LeRobot format, with RGB, joint states and gripper commands.
+[00:05:18] 陈思远：LeRobot is fine, we have a converter to RLDS already.
+[00:05:24] Marco Rossi：Each episode is about 45 seconds on average, recorded at 15 Hz, and every episode has a success label from the operator.
+[00:05:34] 陈思远：So we will need to resample everything to 10 Hz on our side. 这个没问题，我们的 pipeline 本来就支持重采样。
+[00:05:44] 赵敏：But please, 数据不要传到 public cloud，只能放在你们学校内部的 cluster 上。This is a hard requirement from our legal team, no exceptions.
+[00:05:57] 周岚：Understood. We'll keep everything on the university cluster, and only people on this project will have access.
+[00:06:05] Daniel Ong：Before we receive anything, we need the NDA signed on our side. I'll get the NDA signed by our admin ASAP.
+[00:06:15] 赵敏：Thanks. Our legal already signed their part, so it's just waiting on you.
+[00:06:22] 陈思远：One more thing on hardware. We only have one spare gripper. For the bin-picking tasks we'll be grasping a lot, and we might wear it out.
+[00:06:34] Marco Rossi：We might be able to lend you a second gripper. I need to check with ops first, they track all the hardware.
+[00:06:44] 周岚：That would help a lot. Another question from our side. We were thinking about open-sourcing the fine-tuned checkpoint together with the paper. Would that be okay with Kestrel?
+[00:06:56] 赵敏：Not for now. 这个要 legal review，checkpoint 如果是在我们数据上训的，现在不能开源。After the review we can discuss again.
+[00:07:07] 周岚：Okay. What about a checkpoint trained only on our own lab data and public data?
+[00:07:15] 赵敏：That one I think is fine, it's your data. But please don't mention our bin-picking results in the paper without asking us first.
+[00:07:26] 周岚：Of course. Any Kestrel result goes through you before it appears anywhere.
+[00:07:32] Marco Rossi：On the technical side, do you guys support ROS 2 Humble? Our cell runs on Humble, and if you ever want to test on our robot, that matters.
+[00:07:44] Daniel Ong：Let me check. I think our Franka driver is still on ROS 1 Noetic, but there might be a bridge we can use.
+[00:07:55] 赵敏：And someone needs to set up a shared drive for the data and the results. 我们这边或者你们那边都可以，as long as it's not public cloud.
+[00:08:08] 周岚：Sure, let's figure that out.
+[00:08:12] Marco Rossi：By the way, the 300 episodes include about 60 with transparent containers. You can evaluate them separately if you want to test my concern.
+[00:08:23] 陈思远：That's useful. I'll report transparent and opaque objects separately in the numbers we send you.
+[00:08:31] 赵敏：Great. 关于 timeline，我们内部 align 一下再回复你们，especially the review date. If it moves earlier, November 20th might be too late for us.
+[00:08:43] 周岚：Let us know as soon as you can. If it moves earlier, we can send partial results first.
+[00:08:51] Marco Rossi：Also, how should we stay in touch going forward? Email threads get lost easily on our side.
+[00:08:59] 周岚：How about a thirty-minute sync every two weeks until the Q4 review? Same people, online is fine.
+[00:09:07] 赵敏：Every two weeks works. 我们用 Teams 还是 Zoom 都行。
+[00:09:13] Daniel Ong：Zoom is easier for us because of the university license.
+[00:09:18] 赵敏：OK, Zoom then. Let's keep Mondays if possible, mornings are better for us.
+[00:09:25] 周岚：Fine. Mondays, every two weeks, thirty minutes.
+[00:09:29] Marco Rossi：One last technical thing. When you send results, could you include the failure videos, not just the success rate? Our ops team learns more from the videos.
+[00:09:41] 陈思远：Sure, we record every trial anyway, so that's easy.
+[00:09:47] Daniel Ong：We'll just need to blur the lab background, there are sometimes people walking by.
+[00:09:54] 周岚：Before we close, one small personal item. Siyuan is interested in a research internship next summer, and Kestrel is on his list. Is there an internship program on your side?
+[00:10:07] 赵敏：Yes, we usually take two or three research interns in summer. 你把 CV 发给我，I'll forward it to our HR and the robotics team lead.
+[00:10:19] 陈思远：Thank you, I'll send my CV this week.
+[00:10:24] Marco Rossi：If you join, you'd probably sit with my team, so you'd already know the data.
+[00:10:32] 赵敏：But to be clear, internship decisions are made by HR and the team lead, I can only forward it.
+[00:10:41] 周岚：Of course, that's understood.
+[00:10:44] 赵敏：Sounds good.
+[00:10:46] 周岚：I'll send a summary email to everyone tonight, with the action items and owners.
+[00:10:54] 赵敏：Perfect. Thanks all, this was very helpful.
+[00:10:58] Marco Rossi：Thanks, talk soon.

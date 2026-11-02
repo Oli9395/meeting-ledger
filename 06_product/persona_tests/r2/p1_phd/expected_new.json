@@ -1,0 +1,15 @@
+{"meeting3":{"date":"2026-11-09","tasks":[
+{"key":"reference格式查完","owner":"陈思雨","due":"2026-11-12"},
+{"key":"memory profile backward对比","owner":"林子昂","due":"2026-11-16"},
+{"key":"Figure 1 teaser矢量图重画","owner":"我(博三)","due":"2026-11-14"},
+{"key":"supplementary video剪两分钟","owner":"陈思雨","due":"2026-11-18"},
+{"key":"写abstract和conclusion","owner":"周明远","due":"2026-11-13"},
+{"key":"Prof. Wang会议结论发群","owner":"林子昂","due":null},
+{"key":"co-author信息发导师","owner":"陈思雨/林子昂/我(博三)各一","due":"2026-11-20"}],
+"transitions":[
+{"key":"experiment section整合","state":"fulfilled"},
+{"key":"related work polish和reference检查","state":"partial_or_rescheduled"},
+{"key":"real robot新标定重跑occlusion","state":"abandoned"},
+{"key":"约Prof. Wang(发邮件)","state":"fulfilled"},
+{"key":"memory profile补backward","state":"partial_or_rescheduled"},
+{"key":"dataset README","state":"partial_or_rescheduled"}]}}

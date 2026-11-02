@@ -1,0 +1,398 @@
+{
+ "r1_db": {
+  "all": {
+   "meetings": 17,
+   "drafts_decided": 97,
+   "confirmed": 78,
+   "rejected": 19,
+   "accepted_no_edit": 40,
+   "accepted_no_edit_pct": 41.2,
+   "edited": 38,
+   "no_owner_ai": 30,
+   "proposals_decided": 57,
+   "proposals_confirmed": 48,
+   "median_pipeline_s": 51.4
+  },
+  "same": {
+   "meetings": 17,
+   "drafts_decided": 97,
+   "confirmed": 78,
+   "rejected": 19,
+   "accepted_no_edit": 40,
+   "accepted_no_edit_pct": 41.2,
+   "edited": 38,
+   "no_owner_ai": 30,
+   "proposals_decided": 57,
+   "proposals_confirmed": 48,
+   "median_pipeline_s": 51.4
+  },
+  "new": {
+   "meetings": 0,
+   "drafts_decided": 0,
+   "confirmed": 0,
+   "rejected": 0,
+   "accepted_no_edit": 0,
+   "accepted_no_edit_pct": null,
+   "edited": 0,
+   "no_owner_ai": 0,
+   "proposals_decided": 0,
+   "proposals_confirmed": 0,
+   "median_pipeline_s": null
+  }
+ },
+ "r2_db": {
+  "all": {
+   "meetings": 25,
+   "drafts_decided": 118,
+   "confirmed": 111,
+   "rejected": 7,
+   "accepted_no_edit": 99,
+   "accepted_no_edit_pct": 83.9,
+   "edited": 12,
+   "no_owner_ai": 11,
+   "proposals_decided": 90,
+   "proposals_confirmed": 86,
+   "median_pipeline_s": 53.9
+  },
+  "same": {
+   "meetings": 15,
+   "drafts_decided": 83,
+   "confirmed": 77,
+   "rejected": 6,
+   "accepted_no_edit": 70,
+   "accepted_no_edit_pct": 84.3,
+   "edited": 7,
+   "no_owner_ai": 6,
+   "proposals_decided": 52,
+   "proposals_confirmed": 49,
+   "median_pipeline_s": 62.0
+  },
+  "new": {
+   "meetings": 10,
+   "drafts_decided": 35,
+   "confirmed": 34,
+   "rejected": 1,
+   "accepted_no_edit": 29,
+   "accepted_no_edit_pct": 82.9,
+   "edited": 5,
+   "no_owner_ai": 5,
+   "proposals_decided": 38,
+   "proposals_confirmed": 37,
+   "median_pipeline_s": 50.7
+  }
+ },
+ "r1_persona": {
+  "expected_tasks": 91,
+  "found_correct": 83,
+  "false_tasks": 23,
+  "owner_wrong": 22,
+  "due_wrong": 12,
+  "edited": 41,
+  "transitions_expected": 56,
+  "transitions_correct": 51,
+  "completed": 8,
+  "sean_ellis": {
+   "very": 0,
+   "somewhat": 8,
+   "not": 0
+  }
+ },
+ "r2_persona": {
+  "expected_tasks": 91,
+  "found_correct": 85,
+  "false_tasks": 7,
+  "owner_wrong": 2,
+  "due_wrong": 4,
+  "edited": 9,
+  "transitions_expected": 56,
+  "transitions_correct": 50,
+  "completed": 8,
+  "sean_ellis": {
+   "very": 1,
+   "somewhat": 7,
+   "not": 0
+  }
+ },
+ "r2_new_meeting": {
+  "expected_tasks": 40,
+  "found_correct": 33,
+  "false_tasks": 1,
+  "owner_wrong": 3,
+  "due_wrong": 1,
+  "transitions_expected": 44,
+  "transitions_correct": 40
+ },
+ "per_persona": {
+  "p1_phd": {
+   "r1": {
+    "expected_tasks": 13,
+    "found_correct": 13,
+    "false_tasks": 6,
+    "owner_wrong": 13,
+    "due_wrong": 1,
+    "edited": 14,
+    "transitions_correct": 8,
+    "transitions_expected": 8,
+    "sean_ellis": "somewhat"
+   },
+   "r2": {
+    "expected_tasks": 13,
+    "found_correct": 13,
+    "false_tasks": 2,
+    "owner_wrong": 2,
+    "due_wrong": 1,
+    "edited": 2,
+    "transitions_correct": 8,
+    "transitions_expected": 8,
+    "sean_ellis": "very"
+   },
+   "new": {
+    "expected_tasks": 7,
+    "found_correct": 7,
+    "false_tasks": 0,
+    "owner_wrong": 2,
+    "due_wrong": 0,
+    "transitions_expected": 6,
+    "transitions_correct": 6
+   }
+  },
+  "p2_pi": {
+   "r1": {
+    "expected_tasks": 14,
+    "found_correct": 14,
+    "false_tasks": 5,
+    "owner_wrong": 4,
+    "due_wrong": 4,
+    "edited": 8,
+    "transitions_correct": 10,
+    "transitions_expected": 11,
+    "sean_ellis": "somewhat"
+   },
+   "r2": {
+    "expected_tasks": 14,
+    "found_correct": 14,
+    "false_tasks": 2,
+    "owner_wrong": 0,
+    "due_wrong": 0,
+    "edited": 0,
+    "transitions_correct": 10,
+    "transitions_expected": 11,
+    "sean_ellis": "somewhat"
+   },
+   "new": {
+    "expected_tasks": 5,
+    "found_correct": 4,
+    "false_tasks": 0,
+    "owner_wrong": 0,
+    "due_wrong": 0,
+    "transitions_expected": 4,
+    "transitions_correct": 3
+   }
+  },
+  "p3_notes": {
+   "r1": {
+    "expected_tasks": 13,
+    "found_correct": 12,
+    "false_tasks": 1,
+    "owner_wrong": 3,
+    "due_wrong": 3,
+    "edited": 8,
+    "transitions_correct": 7,
+    "transitions_expected": 8,
+    "sean_ellis": "somewhat"
+   },
+   "r2": {
+    "expected_tasks": 13,
+    "found_correct": 12,
+    "false_tasks": 0,
+    "owner_wrong": 0,
+    "due_wrong": 1,
+    "edited": 0,
+    "transitions_correct": 7,
+    "transitions_expected": 8,
+    "sean_ellis": "somewhat"
+   },
+   "new": {
+    "expected_tasks": 6,
+    "found_correct": 3,
+    "false_tasks": 0,
+    "owner_wrong": 0,
+    "due_wrong": 0,
+    "transitions_expected": 5,
+    "transitions_correct": 5,
+    "note": "另有2条(poster交印、补ablation新结果)被并入对账提议的新时间，未建新任务；每人周报只进决议"
+   }
+  },
+  "p4_mllead": {
+   "r1": {
+    "expected_tasks": 9,
+    "found_correct": 9,
+    "false_tasks": 3,
+    "owner_wrong": 2,
+    "due_wrong": 1,
+    "edited": 2,
+    "transitions_correct": 6,
+    "transitions_expected": 6,
+    "sean_ellis": "somewhat"
+   },
+   "r2": {
+    "expected_tasks": 9,
+    "found_correct": 9,
+    "false_tasks": 1,
+    "owner_wrong": 0,
+    "due_wrong": 0,
+    "edited": 0,
+    "transitions_correct": 6,
+    "transitions_expected": 6,
+    "sean_ellis": "somewhat"
+   },
+   "new": {
+    "expected_tasks": 6,
+    "found_correct": 6,
+    "false_tasks": 0,
+    "owner_wrong": 0,
+    "due_wrong": 1,
+    "transitions_expected": 6,
+    "transitions_correct": 6
+   }
+  },
+  "p5_founder": {
+   "r1": {
+    "expected_tasks": 12,
+    "found_correct": 10,
+    "false_tasks": 2,
+    "owner_wrong": 0,
+    "due_wrong": 1,
+    "edited": 3,
+    "transitions_correct": 6,
+    "transitions_expected": 6,
+    "sean_ellis": "somewhat"
+   },
+   "r2": {
+    "expected_tasks": 12,
+    "found_correct": 12,
+    "false_tasks": 0,
+    "owner_wrong": 0,
+    "due_wrong": 0,
+    "edited": 4,
+    "transitions_correct": 6,
+    "transitions_expected": 6,
+    "sean_ellis": "somewhat"
+   },
+   "new": {
+    "expected_tasks": 4,
+    "found_correct": 4,
+    "false_tasks": 0,
+    "owner_wrong": 0,
+    "due_wrong": 0,
+    "transitions_expected": 6,
+    "transitions_correct": 5,
+    "meeting_seconds": 51
+   }
+  },
+  "p6_pm": {
+   "r1": {
+    "expected_tasks": 14,
+    "found_correct": 11,
+    "false_tasks": 3,
+    "owner_wrong": 0,
+    "due_wrong": 1,
+    "edited": 1,
+    "transitions_correct": 7,
+    "transitions_expected": 7,
+    "sean_ellis": "somewhat"
+   },
+   "r2": {
+    "expected_tasks": 14,
+    "found_correct": 12,
+    "false_tasks": 2,
+    "owner_wrong": 0,
+    "due_wrong": 0,
+    "edited": 0,
+    "transitions_correct": 7,
+    "transitions_expected": 7,
+    "sean_ellis": "somewhat"
+   },
+   "new": {
+    "expected_tasks": 7,
+    "found_correct": 5,
+    "false_tasks": 1,
+    "owner_wrong": 1,
+    "due_wrong": 0,
+    "transitions_expected": 6,
+    "transitions_correct": 5
+   }
+  },
+  "p7_skeptic": {
+   "r1": {
+    "expected_tasks": 7,
+    "found_correct": 6,
+    "false_tasks": 0,
+    "owner_wrong": 0,
+    "due_wrong": 0,
+    "edited": 1,
+    "transitions_correct": 3,
+    "transitions_expected": 4,
+    "sean_ellis": "somewhat"
+   },
+   "r2": {
+    "expected_tasks": 7,
+    "found_correct": 6,
+    "false_tasks": 0,
+    "owner_wrong": 0,
+    "due_wrong": 0,
+    "edited": 1,
+    "transitions_correct": 3,
+    "transitions_expected": 4,
+    "sean_ellis": "somewhat"
+   },
+   "new": {
+    "expected_tasks": 2,
+    "found_correct": 1,
+    "false_tasks": 0,
+    "owner_wrong": 0,
+    "due_wrong": 0,
+    "transitions_expected": 5,
+    "transitions_correct": 5
+   }
+  },
+  "p8_newbie": {
+   "r1": {
+    "expected_tasks": 9,
+    "found_correct": 8,
+    "false_tasks": 3,
+    "owner_wrong": 0,
+    "due_wrong": 1,
+    "edited": 4,
+    "transitions_correct": 4,
+    "transitions_expected": 6,
+    "sean_ellis": "somewhat"
+   },
+   "r2": {
+    "expected_tasks": 9,
+    "found_correct": 7,
+    "false_tasks": 0,
+    "owner_wrong": 0,
+    "due_wrong": 2,
+    "edited": 2,
+    "transitions_correct": 3,
+    "transitions_expected": 6,
+    "sean_ellis": "somewhat"
+   },
+   "new": {
+    "expected_tasks": 3,
+    "found_correct": 3,
+    "false_tasks": 0,
+    "owner_wrong": 0,
+    "due_wrong": 0,
+    "transitions_expected": 6,
+    "transitions_correct": 5
+   }
+  }
+ },
+ "security": {
+  "injection_executed": false,
+  "xss_triggered": false,
+  "false_fulfilled": 0
+ }
+}

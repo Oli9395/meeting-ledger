@@ -1,0 +1,18 @@
+{"persona":"p8_newbie","completed_flow":true,"meeting_seconds":[55.8,">300 (超过5分钟仍在处理中，之后才完成，实际耗时未精确测到)"],"expected_tasks":9,"found_correct":7,
+"missed":["meeting2：小李写前端测试用例（仍被并进对账卡'确定测试由谁来做'，未成新任务）","meeting2：阿珍接口测试（同上）"],
+"false_tasks":[],"owner_wrong":0,"due_wrong":2,"edited":2,"transitions_expected":6,"transitions_correct":3,
+"bugs":[
+{"severity":"major","what":"meeting2 处理超过5分钟没出结果、也没报错，页面一直'处理中'（同一账本 meeting1 55秒、meeting3 53秒）","repro":"r2 账本交 meeting2.txt，等待 >300 秒"},
+{"severity":"major","what":"'分配给人'的话（小李写测试用例、阿珍接口测试）仍不成新任务，被并进'确定测试由谁来做'对账卡，meeting3 同样把测试进展挂到该卡上","repro":"meeting2.txt / meeting3.txt"},
+{"severity":"minor","what":"登录13号/发布15号 草稿截止日为空、标'时间不明确'，但同一段话上文已说'11月13日前'；meeting1 的 due 我需手填","repro":"meeting1.txt"},
+{"severity":"minor","what":"在对账卡确认'还没做完或改期，新时间15号(时间不明确)'后，任务板上发布接口截止日被清空（我在 meeting1 草稿里手填过 2026-11-15）；之后标完成仍为空","repro":"meeting1 草稿填15号并确认 -> meeting2 确认发布接口卡 -> 看任务板/CSV"},
+{"severity":"minor","what":"对账状态误判：meeting2 里'ER图画好了'被归为'还没做完或改期'（需手动用'改成…'改）；meeting3'商品详情页做完了'也被归为'还没做完'","repro":"meeting2/meeting3"},
+{"severity":"minor","what":"任务卡显示'小王 说'（说话人），但负责人是小李/阿珍，新手易以为负责人是小王","repro":"meeting1 草稿卡"}],
+"ux_issues":["示例账本仍落在第3场，一进来14条待确认；但顶部新增说明'灰色是上次说的话，绿色是这次说的话，对的点确认，然后去任务板看变化'，比第一轮好懂","术语：'对账'标题改为'上次的事，这次怎么样了'，'已答应/时间不明确/未决问题/这次没人提'比'无人提及/未锚定/明确承诺'好懂很多，我听得懂了","对账卡'改成…'下拉选项是'会上说已完成/放弃'，选择后立即生效且卡片变已确认，没有二次确认，容易误操作","卡片确认后位置不变但按钮替换为'撤销'；我用索引点击误操作了两次，靠'撤销'恢复，撤销好用","任务板按人汇总、导出CSV、设置页复制链接、/privacy 都在且可用","retype 后同一张卡的 prop-confirm 消失（自动确认），新手可能不清楚"],
+"sean_ellis":"somewhat",
+"would_use_because":"贴微信群聊直接得到带简短标题和原话的任务清单，说话人解析已正确，重复草稿没了，任务板可导出CSV，下次开会能对上次的账。",
+"would_not_use_because":"分配测试这类话仍不成任务；有一次处理超过5分钟；确认部分完成会清掉截止日；有些状态要手动改。",
+"console_errors":[],
+"new_meeting":{"expected_tasks":3,"found_correct":3,"false_tasks":0,"owner_wrong":0,"due_wrong":0,"transitions_expected":6,"transitions_correct":5},
+"r1_bugs_fixed":["微信两行格式说话人被解析成'小王 21'（现在为 21:03 小王：内容，正确）","一件事被拆成2-3条重复草稿、无负责人碎片（现 meeting1 为6条，对应6个预期任务，0条假任务）","'我自己写'没认出负责人（现 PPT/需求文档负责人=小王）","任务标题是原话碎片（现有简短标题，如'完成用户登录接口'）","会后追问括号为空'（）'（现为'完成用户登录接口（阿珍）：…'）","'需求文档和PPT'合并导致PPT状态混乱（现拆成两条）","示例账本无引导（现有顶部说明）","术语看不懂（'对账/无人提及/未锚定'文案已改，较易懂）"],
+"r1_bugs_still_open":["'分配给人'的测试用例/接口测试仍不成新任务，被并进对账卡","对账状态仍有误判（ER图、商品详情页做完 被归到'没做完'；发布接口/PPT 与我预设 not_mentioned 不同，沿用第一轮标准计为不一致）","示例账本仍是14张卡，首次进入信息量大","登录13号/发布15号 的月份没被补出（due 为空）"]}

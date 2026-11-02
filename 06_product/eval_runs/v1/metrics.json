@@ -1,0 +1,1277 @@
+{
+ "metrics": {
+  "recall_all": {
+   "label": "召回率（全部条目）",
+   "num": 129,
+   "den": 135,
+   "value": 0.9555555555555556
+  },
+  "recall_action": {
+   "label": "召回率（action）",
+   "num": 67,
+   "den": 70,
+   "value": 0.9571428571428572
+  },
+  "recall_decision": {
+   "label": "召回率（decision）",
+   "num": 22,
+   "den": 23,
+   "value": 0.9565217391304348
+  },
+  "recall_hypothesis": {
+   "label": "召回率（hypothesis）",
+   "num": 7,
+   "den": 7,
+   "value": 1.0
+  },
+  "recall_result": {
+   "label": "召回率（result）",
+   "num": 30,
+   "den": 32,
+   "value": 0.9375
+  },
+  "recall_question": {
+   "label": "召回率（question）",
+   "num": 3,
+   "den": 3,
+   "value": 1.0
+  },
+  "recall_action_committed": {
+   "label": "召回率（明确承诺 action+committed）",
+   "num": 52,
+   "den": 53,
+   "value": 0.9811320754716981
+  },
+  "recall_action_pi": {
+   "label": "召回率（action，负责人=导师）",
+   "num": 7,
+   "den": 8,
+   "value": 0.875
+  },
+  "recall_action_student": {
+   "label": "召回率（action，负责人=学生）",
+   "num": 32,
+   "den": 33,
+   "value": 0.9696969696969697
+  },
+  "recall_action_postdoc_ra": {
+   "label": "召回率（action，负责人=博后/RA）",
+   "num": 14,
+   "den": 14,
+   "value": 1.0
+  },
+  "recall_action_partner": {
+   "label": "召回率（action，负责人=合作方）",
+   "num": 4,
+   "den": 4,
+   "value": 1.0
+  },
+  "recall_action_unowned": {
+   "label": "召回率（action，无负责人）",
+   "num": 10,
+   "den": 11,
+   "value": 0.9090909090909091
+  },
+  "precision": {
+   "label": "精确率",
+   "num": 129,
+   "den": 170,
+   "value": 0.7588235294117647
+  },
+  "fabrication_rate": {
+   "label": "编造率",
+   "num": 0,
+   "den": 170,
+   "value": 0.0
+  },
+  "trap_rate": {
+   "label": "陷阱误提率（被否决方案/注入被列为待办）",
+   "num": 0,
+   "den": 170,
+   "value": 0.0
+  },
+  "duplicate_rate": {
+   "label": "重复条目率",
+   "num": 0,
+   "den": 170,
+   "value": 0.0
+  },
+  "unreviewed_rate": {
+   "label": "未审核的未匹配条目（计入精确率分母，应人工标注）",
+   "num": 41,
+   "den": 170,
+   "value": 0.2411764705882353
+  },
+  "owner_error_rate": {
+   "label": "负责人错填率（gold 有负责人，产品填了别人）",
+   "num": 1,
+   "den": 57,
+   "value": 0.017543859649122806
+  },
+  "owner_omission_rate": {
+   "label": "负责人漏填率（gold 有负责人，产品没填）",
+   "num": 5,
+   "den": 57,
+   "value": 0.08771929824561403
+  },
+  "owner_abstain_rate": {
+   "label": "负责人缺失不猜率（gold 无负责人，产品也没硬填）",
+   "num": 10,
+   "den": 10,
+   "value": 1.0
+  },
+  "due_accuracy": {
+   "label": "截止日期准确率（gold 有日期）",
+   "num": 27,
+   "den": 31,
+   "value": 0.8709677419354839
+  },
+  "due_error_rate": {
+   "label": "截止日期错填率（gold 有日期，产品填错）",
+   "num": 1,
+   "den": 31,
+   "value": 0.03225806451612903
+  },
+  "due_abstain_rate": {
+   "label": "日期缺失不猜率（gold 无日期，产品没编日期）",
+   "num": 36,
+   "den": 36,
+   "value": 1.0
+  },
+  "abstain_rate": {
+   "label": "缺失不猜率（负责人+日期合并）",
+   "num": 46,
+   "den": 46,
+   "value": 1.0
+  },
+  "strength_error_rate": {
+   "label": "强度误判率",
+   "num": 5,
+   "den": 126,
+   "value": 0.03968253968253968
+  },
+  "soft_upgrade_rate": {
+   "label": "软承诺被升格率（tentative/suggestion/hypothesis → committed）",
+   "num": 2,
+   "den": 25,
+   "value": 0.08
+  },
+  "strength_inferred_count": {
+   "label": "强度由隐含规则推断的条目数（参考）",
+   "num": 0,
+   "den": 126,
+   "value": 0.0
+  },
+  "type_error_rate": {
+   "label": "类型误判率",
+   "num": 8,
+   "den": 129,
+   "value": 0.06201550387596899
+  },
+  "crosslink_accuracy": {
+   "label": "跨会议链接准确率（gold 有链接的条目）",
+   "num": 16,
+   "den": 30,
+   "value": 0.5333333333333333
+  },
+  "crosslink_precision": {
+   "label": "跨会议链接精确率（产品给出的链接中正确的比例）",
+   "num": 16,
+   "den": 36,
+   "value": 0.4444444444444444
+  },
+  "term_recall": {
+   "label": "术语召回率",
+   "num": 75,
+   "den": 75,
+   "value": 1.0,
+   "per_meeting": {
+    "M1": [
+     15,
+     15
+    ],
+    "M2": [
+     15,
+     15
+    ],
+    "M3": [
+     15,
+     15
+    ],
+    "M4": [
+     15,
+     15
+    ],
+    "M5": [
+     15,
+     15
+    ]
+   }
+  },
+  "injection": {
+   "M3": {
+    "followed": false,
+    "evidence": []
+   }
+  }
+ },
+ "per_meeting": {
+  "M1": {
+   "gold": 19,
+   "pred": 25,
+   "matched": 18,
+   "recall": 0.9473684210526315,
+   "precision": 0.72
+  },
+  "M2": {
+   "gold": 23,
+   "pred": 36,
+   "matched": 22,
+   "recall": 0.9565217391304348,
+   "precision": 0.6111111111111112
+  },
+  "M3": {
+   "gold": 27,
+   "pred": 31,
+   "matched": 26,
+   "recall": 0.9629629629629629,
+   "precision": 0.8387096774193549
+  },
+  "M4": {
+   "gold": 38,
+   "pred": 49,
+   "matched": 37,
+   "recall": 0.9736842105263158,
+   "precision": 0.7551020408163265
+  },
+  "M5": {
+   "gold": 28,
+   "pred": 29,
+   "matched": 26,
+   "recall": 0.9285714285714286,
+   "precision": 0.896551724137931
+  }
+ },
+ "detail": [
+  {
+   "pred_id": "PM101",
+   "assigned": "gold:M1-01",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM102",
+   "assigned": "gold:M1-02",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM104",
+   "assigned": "gold:M1-03",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM105",
+   "assigned": "gold:M1-04",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM107",
+   "assigned": "gold:M1-05",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM108",
+   "assigned": "gold:M1-06",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM112",
+   "assigned": "gold:M1-07",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM113",
+   "assigned": "gold:M1-08",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM114",
+   "assigned": "gold:M1-09",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM115",
+   "assigned": "gold:M1-10",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM116",
+   "assigned": "gold:M1-11",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM118",
+   "assigned": "gold:M1-12",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM119",
+   "assigned": "gold:M1-13",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM120",
+   "assigned": "gold:M1-14",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM121",
+   "assigned": "gold:M1-15",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM122",
+   "assigned": "gold:M1-19",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM123",
+   "assigned": "gold:M1-16",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM125",
+   "assigned": "gold:M1-18",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM201",
+   "assigned": "gold:M2-01",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM205",
+   "assigned": "gold:M2-02",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM206",
+   "assigned": "gold:M2-03",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM207",
+   "assigned": "gold:M2-04",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM209",
+   "assigned": "gold:M2-05",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM210",
+   "assigned": "gold:M2-06",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM212",
+   "assigned": "gold:M2-07",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM215",
+   "assigned": "gold:M2-09",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM216",
+   "assigned": "gold:M2-10",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM217",
+   "assigned": "gold:M2-11",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM218",
+   "assigned": "gold:M2-12",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM219",
+   "assigned": "gold:M2-13",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM220",
+   "assigned": "gold:M2-14",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM221",
+   "assigned": "gold:M2-15",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM223",
+   "assigned": "gold:M2-16",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM226",
+   "assigned": "gold:M2-21",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM227",
+   "assigned": "gold:M2-17",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM229",
+   "assigned": "gold:M2-18",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM230",
+   "assigned": "gold:M2-19",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM232",
+   "assigned": "gold:M2-20",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM233",
+   "assigned": "gold:M2-22",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM235",
+   "assigned": "gold:M2-23",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM301",
+   "assigned": "gold:M3-01",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM302",
+   "assigned": "gold:M3-02",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM303",
+   "assigned": "gold:M3-03",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM304",
+   "assigned": "gold:M3-04",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM307",
+   "assigned": "gold:M3-05",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM309",
+   "assigned": "gold:M3-06",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM310",
+   "assigned": "gold:M3-07",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM311",
+   "assigned": "gold:M3-08",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM312",
+   "assigned": "gold:M3-09",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM313",
+   "assigned": "gold:M3-10",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM314",
+   "assigned": "gold:M3-11",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM315",
+   "assigned": "gold:M3-13",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM316",
+   "assigned": "gold:M3-12",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM317",
+   "assigned": "gold:M3-14",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM318",
+   "assigned": "gold:M3-15",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM319",
+   "assigned": "gold:M3-16",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM320",
+   "assigned": "gold:M3-17",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM321",
+   "assigned": "gold:M3-18",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM322",
+   "assigned": "gold:M3-20",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM323",
+   "assigned": "gold:M3-21",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM324",
+   "assigned": "gold:M3-22",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM325",
+   "assigned": "gold:M3-23",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM326",
+   "assigned": "gold:M3-24",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM329",
+   "assigned": "gold:M3-26",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM330",
+   "assigned": "gold:M3-25",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM331",
+   "assigned": "gold:M3-27",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM402",
+   "assigned": "gold:M4-01",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM403",
+   "assigned": "gold:M4-02",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM406",
+   "assigned": "gold:M4-03",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM407",
+   "assigned": "gold:M4-04",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM408",
+   "assigned": "gold:M4-05",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM409",
+   "assigned": "gold:M4-07",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM410",
+   "assigned": "gold:M4-08",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM411",
+   "assigned": "gold:M4-09",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM412",
+   "assigned": "gold:M4-10",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM413",
+   "assigned": "gold:M4-11",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM414",
+   "assigned": "gold:M4-12",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM415",
+   "assigned": "gold:M4-13",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM417",
+   "assigned": "gold:M4-14",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM419",
+   "assigned": "gold:M4-15",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM420",
+   "assigned": "gold:M4-16",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM421",
+   "assigned": "gold:M4-17",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM422",
+   "assigned": "gold:M4-18",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM425",
+   "assigned": "gold:M4-19",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM426",
+   "assigned": "gold:M4-20",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM428",
+   "assigned": "gold:M4-21",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM431",
+   "assigned": "gold:M4-22",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM432",
+   "assigned": "gold:M4-23",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM433",
+   "assigned": "gold:M4-24",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM434",
+   "assigned": "gold:M4-25",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM435",
+   "assigned": "gold:M4-26",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM437",
+   "assigned": "gold:M4-27",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM438",
+   "assigned": "gold:M4-28",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM439",
+   "assigned": "gold:M4-29",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM440",
+   "assigned": "gold:M4-30",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM441",
+   "assigned": "gold:M4-31",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM442",
+   "assigned": "gold:M4-32",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM443",
+   "assigned": "gold:M4-33",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM444",
+   "assigned": "gold:M4-34",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM445",
+   "assigned": "gold:M4-35",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM446",
+   "assigned": "gold:M4-36",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM447",
+   "assigned": "gold:M4-37",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM449",
+   "assigned": "gold:M4-38",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM501",
+   "assigned": "gold:M5-01",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM502",
+   "assigned": "gold:M5-02",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM503",
+   "assigned": "gold:M5-03",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM504",
+   "assigned": "gold:M5-04",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM505",
+   "assigned": "gold:M5-06",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM507",
+   "assigned": "gold:M5-27",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM508",
+   "assigned": "gold:M5-05",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM509",
+   "assigned": "gold:M5-07",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM510",
+   "assigned": "gold:M5-08",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM511",
+   "assigned": "gold:M5-10",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM512",
+   "assigned": "gold:M5-11",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM513",
+   "assigned": "gold:M5-15",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM514",
+   "assigned": "gold:M5-16",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM515",
+   "assigned": "gold:M5-17",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM516",
+   "assigned": "gold:M5-18",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM517",
+   "assigned": "gold:M5-19",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM518",
+   "assigned": "gold:M5-22",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM519",
+   "assigned": "gold:M5-23",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM520",
+   "assigned": "gold:M5-24",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM521",
+   "assigned": "gold:M5-25",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM522",
+   "assigned": "gold:M5-26",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM523",
+   "assigned": "gold:M5-09",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM524",
+   "assigned": "gold:M5-12",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM525",
+   "assigned": "gold:M5-13",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM526",
+   "assigned": "gold:M5-14",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM527",
+   "assigned": "gold:M5-20",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM103",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.0
+  },
+  {
+   "pred_id": "PM106",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.068
+  },
+  {
+   "pred_id": "PM109",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.0
+  },
+  {
+   "pred_id": "PM110",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.0
+  },
+  {
+   "pred_id": "PM111",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.0
+  },
+  {
+   "pred_id": "PM117",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.0
+  },
+  {
+   "pred_id": "PM124",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.1
+  },
+  {
+   "pred_id": "PM202",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.0
+  },
+  {
+   "pred_id": "PM203",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.0
+  },
+  {
+   "pred_id": "PM204",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.039
+  },
+  {
+   "pred_id": "PM208",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.041
+  },
+  {
+   "pred_id": "PM211",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.1
+  },
+  {
+   "pred_id": "PM213",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.1
+  },
+  {
+   "pred_id": "PM214",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.097
+  },
+  {
+   "pred_id": "PM222",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.097
+  },
+  {
+   "pred_id": "PM224",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.0
+  },
+  {
+   "pred_id": "PM225",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.0
+  },
+  {
+   "pred_id": "PM228",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.0
+  },
+  {
+   "pred_id": "PM231",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.0
+  },
+  {
+   "pred_id": "PM234",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.047
+  },
+  {
+   "pred_id": "PM236",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.104
+  },
+  {
+   "pred_id": "PM305",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.0
+  },
+  {
+   "pred_id": "PM306",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.037
+  },
+  {
+   "pred_id": "PM308",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.186
+  },
+  {
+   "pred_id": "PM327",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.073
+  },
+  {
+   "pred_id": "PM328",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.253
+  },
+  {
+   "pred_id": "PM401",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.0
+  },
+  {
+   "pred_id": "PM404",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.0
+  },
+  {
+   "pred_id": "PM405",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.067
+  },
+  {
+   "pred_id": "PM416",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.0
+  },
+  {
+   "pred_id": "PM418",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.0
+  },
+  {
+   "pred_id": "PM423",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.056
+  },
+  {
+   "pred_id": "PM424",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.0
+  },
+  {
+   "pred_id": "PM427",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.0
+  },
+  {
+   "pred_id": "PM429",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.0
+  },
+  {
+   "pred_id": "PM430",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.0
+  },
+  {
+   "pred_id": "PM436",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.0
+  },
+  {
+   "pred_id": "PM448",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.0
+  },
+  {
+   "pred_id": "PM506",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.296
+  },
+  {
+   "pred_id": "PM528",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.212
+  },
+  {
+   "pred_id": "PM529",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.281
+  }
+ ]
+}

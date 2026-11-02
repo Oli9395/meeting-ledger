@@ -1,0 +1,15 @@
+{"meeting3":{"date":"2026-11-09","tasks":[
+{"key":"王建国发邮件确认优惠券导出报价","owner":"王建国","due":"2026-11-09"},
+{"key":"王建国提供支付接口文档","owner":"王建国","due":"2026-11-12"},
+{"key":"赵敏下周一转客服对接文档","owner":"赵敏","due":"2026-11-16"},
+{"key":"林悦评估分享海报工期报价","owner":"林悦","due":"2026-11-11"},
+{"key":"赵敏尽快提供分享文案","owner":"赵敏","due":null},
+{"key":"周婷出客服入口设计稿","owner":"周婷","due":null},
+{"key":"林悦发会议纪要","owner":"林悦","due":"2026-11-09"}],
+"transitions":[
+{"key":"王建国答复优惠券报价","state":"fulfilled"},
+{"key":"陈浩评估门店筛选","state":"fulfilled"},
+{"key":"周婷首页两处小修改","state":"fulfilled"},
+{"key":"王建国支付接口文档(11-04)","state":"partial_or_rescheduled"},
+{"key":"赵敏客服对接文档","state":"partial_or_rescheduled"},
+{"key":"赵敏海报素材","state":"not_mentioned"}]}}

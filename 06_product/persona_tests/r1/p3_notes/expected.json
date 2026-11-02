@@ -1,0 +1,24 @@
+{"meeting1":{"tasks":[
+{"key":"跑baseline","owner":"王浩","due":"2026-10-30"},
+{"key":"补完related work","owner":"李芳","due":"2026-10-28"},
+{"key":"修数据清洗bug","owner":"陈思远","due":"2026-10-29"},
+{"key":"重做ablation","owner":"小李(名单可能无)","due":"2026-11-09"},
+{"key":"申请显卡/问管理员","owner":null,"due":"2026-10-27"},
+{"key":"发标注指南","owner":"赵磊","due":"2026-10-30"},
+{"key":"每人更新slides","owner":null,"due":null},
+{"key":"poster搞定","owner":"陈思远","due":"2026-10-31"}]},
+"meeting2":{"tasks":[
+{"key":"查baseline偏低原因","owner":"王浩","due":"2026-11-04"},
+{"key":"给标注员培训","owner":"赵磊","due":"2026-11-05"},
+{"key":"完整初稿汇总","owner":"李芳","due":"2026-11-10"},
+{"key":"申请服务器配额","owner":"王浩","due":"2026-11-09"},
+{"key":"slides传共享盘","owner":null,"due":"2026-11-06"}],
+"transitions":[
+{"key":"跑baseline","state":"fulfilled"},
+{"key":"补完related work","state":"partial_or_rescheduled"},
+{"key":"修数据清洗bug","state":"fulfilled"},
+{"key":"重做ablation","state":"partial_or_rescheduled"},
+{"key":"申请显卡","state":"partial_or_rescheduled"},
+{"key":"发标注指南","state":"fulfilled"},
+{"key":"每人更新slides","state":"partial_or_rescheduled"},
+{"key":"poster","state":"partial_or_rescheduled"}]}}

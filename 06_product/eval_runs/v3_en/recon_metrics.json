@@ -1,0 +1,182 @@
+{
+ "all": {
+  "fgr_mentioned": {
+   "label": "False-green rate: mentioned but not cleanly fulfilled (partial/abandoned/condition mismatch)",
+   "num": 0,
+   "den": 11,
+   "value": 0.0
+  },
+  "fgr_unmentioned": {
+   "label": "False-green rate: not mentioned but judged fulfilled",
+   "num": 1,
+   "den": 75,
+   "value": 0.013333333333333334
+  },
+  "transition_accuracy": {
+   "label": "Transition type accuracy (mentioned rows)",
+   "num": 21,
+   "den": 23,
+   "value": 0.9130434782608695
+  },
+  "transition_accuracy_all": {
+   "label": "Transition type accuracy (all scorable rows, including not mentioned)",
+   "num": 94,
+   "den": 98,
+   "value": 0.9591836734693877
+  },
+  "mention_recall": {
+   "label": "Cross-meeting mention recall (mentioned rows with a prediction other than 'not mentioned')",
+   "num": 22,
+   "den": 23,
+   "value": 0.9565217391304348
+  },
+  "unmentioned_recall": {
+   "label": "Not-mentioned recall",
+   "num": 73,
+   "den": 75,
+   "value": 0.9733333333333334
+  },
+  "unmentioned_precision": {
+   "label": "Not-mentioned precision (rows predicted as not mentioned that are also not mentioned in gold)",
+   "num": 73,
+   "den": 74,
+   "value": 0.9864864864864865
+  },
+  "quote_verbatim_rate": {
+   "label": "Quote verbatim rate (DIY rewrite rate = 1 − this value)",
+   "num": 93,
+   "den": 93,
+   "value": 1.0
+  },
+  "extra_predictions": {
+   "label": "Predictions that match no tracked thread (count)",
+   "num": 6,
+   "den": 0,
+   "value": null
+  },
+  "stale_number_recall": {
+   "label": "Stale-number check recall (n is very small, report counts only)",
+   "num": 0,
+   "den": 1,
+   "value": 0.0
+  }
+ },
+ "dev": {
+  "fgr_mentioned": {
+   "label": "False-green rate: mentioned but not cleanly fulfilled (partial/abandoned/condition mismatch)",
+   "num": 0,
+   "den": 9,
+   "value": 0.0
+  },
+  "fgr_unmentioned": {
+   "label": "False-green rate: not mentioned but judged fulfilled",
+   "num": 0,
+   "den": 24,
+   "value": 0.0
+  },
+  "transition_accuracy": {
+   "label": "Transition type accuracy (mentioned rows)",
+   "num": 14,
+   "den": 15,
+   "value": 0.9333333333333333
+  },
+  "transition_accuracy_all": {
+   "label": "Transition type accuracy (all scorable rows, including not mentioned)",
+   "num": 38,
+   "den": 39,
+   "value": 0.9743589743589743
+  },
+  "mention_recall": {
+   "label": "Cross-meeting mention recall (mentioned rows with a prediction other than 'not mentioned')",
+   "num": 15,
+   "den": 15,
+   "value": 1.0
+  },
+  "unmentioned_recall": {
+   "label": "Not-mentioned recall",
+   "num": 24,
+   "den": 24,
+   "value": 1.0
+  },
+  "unmentioned_precision": {
+   "label": "Not-mentioned precision (rows predicted as not mentioned that are also not mentioned in gold)",
+   "num": 24,
+   "den": 24,
+   "value": 1.0
+  },
+  "quote_verbatim_rate": {
+   "label": "Quote verbatim rate (DIY rewrite rate = 1 − this value)",
+   "num": 51,
+   "den": 51,
+   "value": 1.0
+  },
+  "extra_predictions": {
+   "label": "Predictions that match no tracked thread (count)",
+   "num": 4,
+   "den": 0,
+   "value": null
+  }
+ },
+ "test": {
+  "fgr_mentioned": {
+   "label": "False-green rate: mentioned but not cleanly fulfilled (partial/abandoned/condition mismatch)",
+   "num": 0,
+   "den": 2,
+   "value": 0.0
+  },
+  "fgr_unmentioned": {
+   "label": "False-green rate: not mentioned but judged fulfilled",
+   "num": 1,
+   "den": 51,
+   "value": 0.0196078431372549
+  },
+  "transition_accuracy": {
+   "label": "Transition type accuracy (mentioned rows)",
+   "num": 7,
+   "den": 8,
+   "value": 0.875
+  },
+  "transition_accuracy_all": {
+   "label": "Transition type accuracy (all scorable rows, including not mentioned)",
+   "num": 56,
+   "den": 59,
+   "value": 0.9491525423728814
+  },
+  "mention_recall": {
+   "label": "Cross-meeting mention recall (mentioned rows with a prediction other than 'not mentioned')",
+   "num": 7,
+   "den": 8,
+   "value": 0.875
+  },
+  "unmentioned_recall": {
+   "label": "Not-mentioned recall",
+   "num": 49,
+   "den": 51,
+   "value": 0.9607843137254902
+  },
+  "unmentioned_precision": {
+   "label": "Not-mentioned precision (rows predicted as not mentioned that are also not mentioned in gold)",
+   "num": 49,
+   "den": 50,
+   "value": 0.98
+  },
+  "quote_verbatim_rate": {
+   "label": "Quote verbatim rate (DIY rewrite rate = 1 − this value)",
+   "num": 42,
+   "den": 42,
+   "value": 1.0
+  },
+  "extra_predictions": {
+   "label": "Predictions that match no tracked thread (count)",
+   "num": 2,
+   "den": 0,
+   "value": null
+  },
+  "stale_number_recall": {
+   "label": "Stale-number check recall (n is very small, report counts only)",
+   "num": 0,
+   "den": 1,
+   "value": 0.0
+  }
+ }
+}

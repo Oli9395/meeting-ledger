@@ -1,0 +1,11 @@
+{"meeting4":{"date":"2026-11-16","tasks":[
+{"key":"补完消融图的分析","owner":"陈思远","due":"2026-11-18"},
+{"key":"加对比实验跑完","owner":"陈思远","due":"2026-12-04"},
+{"key":"过一遍论文第四节发意见","owner":"周明远","due":"2026-11-20"},
+{"key":"把发票交给系里王秘书","owner":"陈思远","due":"2026-11-19"},
+{"key":"给王晓雨写环境配置说明","owner":"陈思远","due":"2026-11-23"}],
+"transitions":[
+{"key":"整理两组消融成图表和分析","state":"partial_or_rescheduled"},
+{"key":"把论文发给赵老师","state":"fulfilled"},
+{"key":"基金委系统确认推荐信","state":"fulfilled"},
+{"key":"数据集授权邮件","state":"not_mentioned"}]}}

@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: briefpilot
+    runtime: docker
+    plan: starter
+    disk: {name: data, mountPath: /data, sizeGB: 1}
+    envVars:
+      - {key: ANTHROPIC_API_KEY, sync: false}
+      - {key: BP_ADMIN_KEY, generateValue: true}

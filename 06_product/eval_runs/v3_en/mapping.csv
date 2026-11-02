@@ -1,0 +1,184 @@
+pred_id,gold_id,note
+PM101,M1-01,auto 0.93
+PM102,M1-02,auto 0.88
+PM103,,Unmatched; closest M1-03 (0.25) → fill in gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM104,M1-03,auto 1.04
+PM105,,Unmatched; closest M1-02 (0.12) → fill in gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM106,,Unmatched; closest M1-01 (0.25) → fill in gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM107,,Unmatched; closest M1-11 (0.13) → fill in gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM108,,Unmatched; closest M1-16 (0.10) → fill in gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM109,M1-04,auto 1.00
+PM110,,Unmatched; closest M1-03 (0.42) → fill in gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM111,M1-05,auto 0.83
+PM112,M1-06,auto 0.86
+PM113,M1-07,auto 1.08
+PM114,,Unmatched; closest M1-07 (0.21) → fill in gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM115,M1-10,auto 0.81
+PM116,M1-12,auto 0.90
+PM117,M1-13,auto 1.06
+PM118,M1-14,auto 1.10
+PM119,M1-15,auto 0.79
+PM120,M1-19,auto 1.10
+PM121,M1-16,auto 0.98
+PM122,,Unmatched; closest M1-16 (0.92) → fill in gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM123,M1-17,auto 1.10
+PM124,M1-18,auto 1.10
+PM125,,Unmatched; closest M1-06 (0.10) → fill in gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM126,M1-09,auto 0.89
+PM127,,Unmatched; closest M1-10 (0.61) → fill in gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM128,M1-11,auto 1.10
+PM201,M2-01,auto 1.03
+PM202,,Unmatched; closest M2-01 (0.22) → fill in gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM203,,Unmatched; closest M2-01 (0.28) → fill in gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM204,,Unmatched; closest M2-12 (0.33) → fill in gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM205,,Unmatched; closest M2-02 (0.30) → fill in gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM206,,Unmatched; closest M2-03 (0.41) → fill in gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM207,M2-03,auto 0.94
+PM208,M2-04,auto 1.10
+PM209,,Unmatched; closest M2-05 (0.39) → fill in gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM210,M2-05,auto 1.03
+PM211,M2-06,auto 0.75
+PM212,M2-07,auto 0.91
+PM213,M2-08,auto 0.85
+PM214,,Unmatched; closest M2-14 (0.10) → fill in gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM215,,Unmatched; closest M2-09 (0.10) → fill in gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM216,M2-09,auto 0.86
+PM217,M2-10,auto 1.01
+PM218,M2-11,auto 1.07
+PM219,,Unmatched; closest M2-12 (0.36) → fill in gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM220,M2-12,auto 0.95
+PM221,M2-13,auto 1.10
+PM222,M2-14,auto 1.09
+PM223,M2-15,auto 0.80
+PM224,,Unmatched; closest M2-15 (0.51) → fill in gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM225,M2-16,auto 1.10
+PM226,,Unmatched; closest M2-15 (0.35) → fill in gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM227,,Unmatched; closest M2-16 (0.10) → fill in gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM228,,Unmatched; closest M2-01 (0.25) → fill in gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM229,M2-21,auto 1.10
+PM230,M2-17,auto 0.98
+PM231,,Unmatched; closest M2-17 (0.10) → fill in gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM232,M2-18,auto 0.93
+PM233,M2-19,auto 1.10
+PM234,,Unmatched; closest M2-21 (0.26) → fill in gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM235,M2-20,auto 1.10
+PM236,M2-22,auto 0.81
+PM237,,Unmatched; closest M2-15 (0.44) → fill in gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM238,M2-23,auto 1.09
+PM239,,Unmatched; closest M2-23 (0.38) → fill in gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM240,,Unmatched; closest M2-17 (0.40) → fill in gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM241,,Unmatched; closest M2-22 (0.10) → fill in gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM301,M3-01,auto 1.10
+PM302,M3-02,auto 0.74
+PM303,,Unmatched; closest M3-01 (0.10) → fill in gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM304,M3-03,auto 1.10
+PM305,M3-04,auto 1.10
+PM306,,Unmatched; closest M3-03 (0.14) → fill in gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM307,M3-05,auto 1.10
+PM308,,Unmatched; closest M3-06 (0.67) → fill in gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM309,M3-19,auto 0.38 (needs manual confirmation)
+PM310,M3-06,auto 1.06
+PM311,M3-07,auto 1.10
+PM312,M3-08,auto 0.93
+PM313,M3-09,auto 1.10
+PM314,M3-10,auto 0.98
+PM315,,Unmatched; closest M3-08 (0.10) → fill in gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM316,M3-11,auto 1.10
+PM317,M3-13,auto 1.09
+PM318,M3-12,auto 1.01
+PM319,M3-14,auto 0.93
+PM320,M3-15,auto 1.10
+PM321,M3-16,auto 1.03
+PM322,M3-17,auto 0.90
+PM323,,Unmatched; closest M3-17 (0.90) → fill in gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM324,M3-18,auto 1.10
+PM325,,Unmatched; closest M3-17 (0.15) → fill in gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM326,M3-20,auto 0.97
+PM327,M3-21,auto 0.94
+PM328,M3-22,auto 1.10
+PM329,M3-23,auto 1.10
+PM330,M3-24,auto 1.10
+PM331,,Unmatched; closest M3-12 (0.13) → fill in gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM332,,Unmatched; closest M3-22 (0.10) → fill in gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM333,M3-25,auto 1.10
+PM334,M3-26,auto 1.10
+PM335,M3-27,auto 0.98
+PM401,,Unmatched; closest M4-01 (0.10) → fill in gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM402,M4-01,auto 0.96
+PM403,M4-02,auto 1.10
+PM404,,Unmatched; closest M4-01 (0.29) → fill in gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM405,,Unmatched; closest M4-15 (0.20) → fill in gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM406,M4-03,auto 1.10
+PM407,M4-04,auto 1.10
+PM408,,Unmatched; closest M4-29 (0.16) → fill in gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM409,M4-05,auto 0.86
+PM410,M4-07,auto 0.98
+PM411,M4-06,auto 1.10
+PM412,M4-08,auto 0.92
+PM413,M4-09,auto 0.83
+PM414,M4-10,auto 1.10
+PM415,M4-11,auto 0.98
+PM416,M4-12,auto 0.84
+PM417,M4-13,auto 1.04
+PM418,M4-14,auto 0.98
+PM419,,Unmatched; closest M4-12 (0.10) → fill in gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM420,M4-15,auto 1.10
+PM421,M4-16,auto 1.10
+PM422,M4-17,auto 1.09
+PM423,M4-18,auto 0.76
+PM424,,Unmatched; closest M4-19 (0.49) → fill in gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM425,,Unmatched; closest M4-18 (0.10) → fill in gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM426,M4-19,auto 1.05
+PM427,M4-20,auto 1.10
+PM428,M4-21,auto 1.10
+PM429,,Unmatched; closest M4-20 (0.15) → fill in gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM430,,Unmatched; closest M4-15 (0.21) → fill in gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM431,M4-22,auto 1.10
+PM432,M4-23,auto 1.10
+PM433,M4-24,auto 0.97
+PM434,M4-25,auto 1.09
+PM435,M4-26,auto 1.07
+PM436,,Unmatched; closest M4-24 (0.24) → fill in gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM437,M4-27,auto 0.98
+PM438,M4-28,auto 1.10
+PM439,M4-29,auto 1.09
+PM440,M4-30,auto 0.87
+PM441,M4-31,auto 1.10
+PM442,M4-32,auto 1.08
+PM443,M4-33,auto 1.10
+PM444,M4-34,auto 1.10
+PM445,M4-35,auto 1.10
+PM446,M4-36,auto 1.10
+PM447,M4-37,auto 1.10
+PM448,,Unmatched; closest M4-33 (0.37) → fill in gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM449,,Unmatched; closest M4-38 (0.20) → fill in gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM450,M4-38,auto 1.09
+PM501,M5-01,auto 0.97
+PM502,M5-02,auto 0.96
+PM503,,Unmatched; closest M5-01 (0.38) → fill in gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM504,M5-03,auto 1.09
+PM505,M5-04,auto 0.91
+PM506,M5-05,auto 1.10
+PM507,M5-06,auto 1.09
+PM508,,Unmatched; closest M5-06 (0.45) → fill in gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM509,,Unmatched; closest M5-22 (0.37) → fill in gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM510,M5-07,auto 1.02
+PM511,M5-08,auto 1.09
+PM512,M5-28,auto 0.40 (needs manual confirmation)
+PM513,M5-09,auto 1.10
+PM514,M5-10,auto 1.09
+PM515,M5-11,auto 1.10
+PM516,M5-12,auto 1.10
+PM517,M5-13,auto 1.10
+PM518,M5-14,auto 0.44 (needs manual confirmation)
+PM519,M5-15,auto 1.10
+PM520,M5-16,auto 1.09
+PM521,M5-17,auto 1.09
+PM522,M5-18,auto 0.79
+PM523,M5-19,auto 1.09
+PM524,M5-20,auto 1.06
+PM525,M5-22,auto 1.05
+PM526,M5-23,auto 0.92
+PM527,M5-24,auto 1.09
+PM528,M5-25,auto 0.99
+PM529,M5-26,auto 1.09

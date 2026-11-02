@@ -1,0 +1,27 @@
+{"meeting1":{"tasks":[
+{"key":"hand-eye calibration重做并重跑baseline","owner":"陈思雨","due":"2026-10-23"},
+{"key":"point cloud encoder memory profile","owner":"林子昂","due":"2026-10-26"},
+{"key":"related work初稿","owner":"陈思雨","due":"2026-10-30"},
+{"key":"occlusion ablation补完","owner":"我(博三)","due":"2026-10-21"},
+{"key":"failure case visualization","owner":"我(博三)","due":"2026-11-05"},
+{"key":"向GPU集群管理员问配额(发邮件)","owner":"陈思雨","due":"2026-10-19"},
+{"key":"约Prof. Wang meeting","owner":"林子昂","due":"2026-10-25"},
+{"key":"整理dataset README和license","owner":null,"due":null}
+]},
+"meeting2":{"tasks":[
+{"key":"experiment section整合进主文","owner":"我(博三)","due":"2026-11-09"},
+{"key":"related work polish和reference检查","owner":"陈思雨","due":"2026-11-10"},
+{"key":"real robot用新标定重跑occlusion实验","owner":"陈思雨+我(博三)","due":"2026-11-06"},
+{"key":"memory profile补backward/checkpointing对比","owner":"林子昂","due":"2026-10-29"},
+{"key":"发邮件约Prof. Wang","owner":"林子昂","due":"2026-10-26"}
+],
+"transitions":[
+{"key":"hand-eye calibration","state":"fulfilled"},
+{"key":"memory profile","state":"partial_or_rescheduled"},
+{"key":"related work初稿","state":"fulfilled"},
+{"key":"occlusion ablation","state":"fulfilled"},
+{"key":"failure case visualization","state":"abandoned"},
+{"key":"约Prof. Wang","state":"partial_or_rescheduled"},
+{"key":"GPU配额","state":"not_mentioned"},
+{"key":"dataset README","state":"not_mentioned"}
+]}}

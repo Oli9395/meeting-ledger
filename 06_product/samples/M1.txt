@@ -1,0 +1,57 @@
+Meeting: M1 Advisor 1-on-1: Zhou Lan × Chen Siyuan
+Date: 2026-10-06 (Tuesday) 10:00
+Attendees: Zhou Lan, Chen Siyuan
+
+[00:00:03] Zhou Lan: Siyuan, have a seat. Two main things today: first, let's go over the LumaVLA progress, and second, let's talk about your internship plans for next year. This should take about half an hour.
+[00:00:14] Chen Siyuan: Sure, Prof. Zhou. I'll start with the results. Last week I finished running LoRA fine-tuning on LIBERO-Spatial. Rank 32 got a success rate of 71.2%, and full fine-tuning got 74.0%, so the gap is under three points.
+[00:00:27] Zhou Lan: How many seeds is each number?
+[00:00:31] Chen Siyuan: They're both averages over 3 seeds. On the VRAM side, LoRA only needs about a third of what full fine-tuning does. It runs on a single A100, and batch size can go up to 16.
+[00:00:43] Zhou Lan: Mm, that's a big VRAM saving, and it's one of the selling points of our paper. But three points really isn't small, and reviewers will zero in on it. Where do you think the drop is coming from?
+[00:00:55] Chen Siyuan: I looked at about fifty failure cases. Most of them are where the gripper doesn't close tightly after picking up, and the object slips during the lift. I suspect the drop at rank 32 is mainly quantization error in the action token for the gripper dimension, and doesn't have much to do with the rank itself.
+[00:01:13] Zhou Lan: That's an interesting hypothesis, but right now it's only a guess. You need experiments to back it up. Have you done the rank ablation?
+[00:01:22] Chen Siyuan: Not fully, I've only run the one point at rank 32. I'll fill in the rank 16 and rank 64 ablation before this Friday, and then plot the curves together.
+[00:01:34] Zhou Lan: Good. And the gripper hypothesis, how do you plan to test it?
+[00:01:40] Chen Siyuan: One way is to pull out the gripper dimension on its own and use continuous-value regression, skipping the tokenizer, and see if the success rate recovers. But that's a fairly big change, since it means touching the action head.
+[00:01:54] Zhou Lan: You could also consider the FAST tokenizer. It does better at compressing high-frequency actions, so it might solve the gripper problem along the way. That's your call, no pressure.
+[00:02:07] Chen Siyuan: Mm, I've only skimmed the abstract of the FAST paper. I'll read the paper carefully first and then see.
+[00:02:14] Zhou Lan: On the training side, what learning rate are you using now?
+[00:02:19] Chen Siyuan: LoRA uses 5e-4, with 500 warmup steps and 30k steps total. I tried 1e-3, and the loss dropped faster early on, but the success rate ended up slightly lower later, so it might be overfitting a bit.
+[00:02:31] Zhou Lan: About how long do 30k steps take?
+[00:02:35] Chen Siyuan: About 14 hours on one A100, so three seeds for one rank is around two days. That's also why the ablation is slow.
+[00:02:45] Zhou Lan: No wonder. Let's not get hung up on hyperparameters for now. What matters most is having a clear main thread. How do you want to tell the story of the paper right now?
+[00:02:53] Chen Siyuan: My current thinking is three parts. Part one says full fine-tuning of VLAs is too expensive for small labs, since most groups only have a few GPUs. Part two says LoRA can keep most of the performance while cutting VRAM to a third. Part three analyzes where exactly those lost points go, which is the gripper piece.
+[00:03:16] Zhou Lan: Part three is the key. If it's just "LoRA works too," everyone could guess that conclusion, and it's not enough for a paper. You have to make clear when it doesn't work and why.
+[00:03:29] Chen Siyuan: Understood, so I'll make the gripper analysis more detailed, with separate stats by object type and grasp phase.
+[00:03:39] Zhou Lan: Right, ideally you'd draw a failure distribution plot, broken down into the four phases of approach, grasp, lift, and place, so reviewers can get it at a glance.
+[00:03:48] Chen Siyuan: OK, I'll go back and draw a first version of that figure. I have another idea too. I've been looking at π0 lately and the results are pretty good. Its flow matching action head is clearly more stable on dexterous tasks. Should we just switch the base model from OpenVLA to π0?
+[00:04:05] Zhou Lan: I understand your motivation, but switching now isn't realistic. All our pipelines, data formats, and eval scripts are built around OpenVLA. Changing the base would take at least a month, and we'd have to reapply for compute. We're not switching to π0 now. This paper stays on OpenVLA, and π0 can get a mention in future work.
+[00:04:26] Chen Siyuan: OK, understood, so we won't switch.
+[00:04:29] Zhou Lan: Though the action chunking idea in π0 is worth borrowing. You don't necessarily have to change models to use it.
+[00:04:38] Chen Siyuan: Right, I can try action chunking. It's just a matter of adding a chunk output on OpenVLA, but no promises I'll have time this week, the ablation comes first.
+[00:04:48] Zhou Lan: That's fine. Finish the ablation first, and we'll see about chunking when you have time.
+[00:04:52] Chen Siyuan: There's one more thing I wanted to ask. For the LIBERO-Long eval, are we standardizing on 3 seeds or 5 seeds? Wang Bo and Muqing seem to be using different numbers, which will be a problem when we compare results side by side later.
+[00:05:08] Zhou Lan: Let's decide that together at the next group meeting. The two of us shouldn't settle it here, or they'll have to rerun things and they won't be happy about it.
+[00:05:17] Chen Siyuan: OK. Also, GPUs are a bit tight. The group's four A100s often have a queue, and if I run the ablation and chunking together there might not be enough.
+[00:05:27] Zhou Lan: I'll figure out the GPU issue. The school has a compute application this semester. I'll submit the application form before next Monday and request some more quota for the group.
+[00:05:40] Chen Siyuan: That's great, thank you, Prof. Zhou.
+[00:05:43] Zhou Lan: Oh right, the gripper on the lab's Franka seems to have come loose again. It already caused a problem last week when Muqing was collecting data. Someone needs to take a look.
+[00:05:54] Chen Siyuan: Mm, I'm not very familiar with the hardware. I'm afraid I'd break something tightening the screws.
+[00:05:59] Zhou Lan: No worries, then I'll ask at Thursday's group meeting who has time.
+[00:06:05] Chen Siyuan: OK.
+[00:06:07] Zhou Lan: On the paper, in a while, start a draft of the related work. It doesn't need to be complete, just sort out the two threads of VLA and parameter-efficient fine-tuning.
+[00:06:17] Chen Siyuan: OK, I'll start a draft.
+[00:06:20] Zhou Lan: Good, that's it for the project for now. You mentioned last time that you want to intern next summer?
+[00:06:26] Chen Siyuan: Yes, I'm looking at Kestrel Robotics and two other companies. Kestrel already collaborates with us and does bin-picking. I think the direction is a good match, and I could use our real-robot data too.
+[00:06:39] Zhou Lan: Kestrel works. Dan knows them pretty well, so you can talk to Dan first about what their group is like. But think it through, because an internship will disrupt your paper schedule for the first half of next year.
+[00:06:53] Chen Siyuan: I know. My thinking is that if LumaVLA can be submitted by the end of the year, interning over the summer won't conflict.
+[00:07:01] Zhou Lan: As for the recommendation letter, once you've decided where to apply, I'll write it for you. Just let me know two weeks in advance.
+[00:07:10] Chen Siyuan: OK, thank you, Prof. Zhou.
+[00:07:13] Zhou Lan: Also, how's your TA work this semester? Is it taking up too much time?
+[00:07:20] Chen Siyuan: TA takes about six hours a week, so it's OK. It's just the two weeks of grading assignments that get intense.
+[00:07:28] Zhou Lan: If it gets to be too much, tell me and I can coordinate with the course side.
+[00:07:34] Chen Siyuan: Mm, I can still manage for now.
+[00:07:38] Zhou Lan: Also, the school has the annual PhD progress review next month. You're presenting for twenty minutes this year, so prepare your slides ahead of time and don't rush at the last minute.
+[00:07:48] Chen Siyuan: OK, I'll send you the slides a week in advance.
+[00:07:54] Zhou Lan: Good, let me quickly sum up: fill in the ablation before Friday; try chunking when you have time; the base model isn't changing; the seed question gets decided at the group meeting; and start a draft of the related work.
+[00:08:05] Chen Siyuan: Right, the ablation is this Friday.
+[00:08:08] Zhou Lan: All right, that's it for today.

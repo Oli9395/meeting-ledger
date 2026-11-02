@@ -1,0 +1,18 @@
+{"meeting1":{"tasks":[
+{"key":"Daniel: root cause of recall regression, post findings","owner":"Daniel Tan","due":"2026-10-30"},
+{"key":"Mei: send signed vendor contract","owner":"Mei Lin","due":"2026-11-06"},
+{"key":"Arjun: write GPU quota request to infra","owner":"Arjun Mehta","due":null},
+{"key":"Sofia: first draft model card","owner":"Sofia Reyes","due":null},
+{"key":"Mei: update annotation guideline and share with vendor","owner":"Mei Lin","due":null},
+{"key":"Daniel: add tokenizer regression test to CI","owner":"Daniel Tan","due":null}]},
+"meeting2":{"tasks":[
+{"key":"Sofia: A/B experiment config","owner":"Sofia Reyes","due":"2026-11-12"},
+{"key":"Arjun: benchmark reranker serving cost","owner":"Arjun Mehta","due":null},
+{"key":"Priya: get launch criteria from PM","owner":"Priya Nair","due":null}],
+"transitions":[
+{"key":"Daniel root cause","state":"fulfilled"},
+{"key":"Mei vendor contract","state":"partial_or_rescheduled"},
+{"key":"Arjun GPU quota request","state":"fulfilled"},
+{"key":"Sofia model card","state":"partial_or_rescheduled"},
+{"key":"Mei annotation guideline","state":"abandoned"},
+{"key":"Daniel CI test","state":"partial_or_rescheduled"}]}}

@@ -1,0 +1,1355 @@
+{
+ "metrics": {
+  "recall_all": {
+   "label": "Recall (all items)",
+   "num": 131,
+   "den": 135,
+   "value": 0.9703703703703703
+  },
+  "recall_action": {
+   "label": "Recall (action)",
+   "num": 68,
+   "den": 70,
+   "value": 0.9714285714285714
+  },
+  "recall_decision": {
+   "label": "Recall (decision)",
+   "num": 22,
+   "den": 23,
+   "value": 0.9565217391304348
+  },
+  "recall_hypothesis": {
+   "label": "Recall (hypothesis)",
+   "num": 7,
+   "den": 7,
+   "value": 1.0
+  },
+  "recall_result": {
+   "label": "Recall (result)",
+   "num": 31,
+   "den": 32,
+   "value": 0.96875
+  },
+  "recall_question": {
+   "label": "Recall (question)",
+   "num": 3,
+   "den": 3,
+   "value": 1.0
+  },
+  "recall_action_committed": {
+   "label": "Recall (explicit commitments, action+committed)",
+   "num": 51,
+   "den": 53,
+   "value": 0.9622641509433962
+  },
+  "recall_action_pi": {
+   "label": "Recall (action, owner=导师)",
+   "num": 8,
+   "den": 8,
+   "value": 1.0
+  },
+  "recall_action_student": {
+   "label": "Recall (action, owner=学生)",
+   "num": 31,
+   "den": 33,
+   "value": 0.9393939393939394
+  },
+  "recall_action_postdoc_ra": {
+   "label": "Recall (action, owner=博后/RA)",
+   "num": 14,
+   "den": 14,
+   "value": 1.0
+  },
+  "recall_action_partner": {
+   "label": "Recall (action, owner=合作方)",
+   "num": 4,
+   "den": 4,
+   "value": 1.0
+  },
+  "recall_action_unowned": {
+   "label": "Recall (action, no owner)",
+   "num": 11,
+   "den": 11,
+   "value": 1.0
+  },
+  "precision": {
+   "label": "Precision",
+   "num": 131,
+   "den": 183,
+   "value": 0.7158469945355191
+  },
+  "fabrication_rate": {
+   "label": "Fabrication rate",
+   "num": 0,
+   "den": 183,
+   "value": 0.0
+  },
+  "trap_rate": {
+   "label": "Trap false-extraction rate (rejected proposals/injections listed as action items)",
+   "num": 0,
+   "den": 183,
+   "value": 0.0
+  },
+  "duplicate_rate": {
+   "label": "Duplicate item rate",
+   "num": 0,
+   "den": 183,
+   "value": 0.0
+  },
+  "unreviewed_rate": {
+   "label": "Unreviewed unmatched items (counted in the precision denominator; should be labeled manually)",
+   "num": 52,
+   "den": 183,
+   "value": 0.28415300546448086
+  },
+  "owner_error_rate": {
+   "label": "Owner error rate (gold has an owner, product named someone else)",
+   "num": 0,
+   "den": 57,
+   "value": 0.0
+  },
+  "owner_omission_rate": {
+   "label": "Owner omission rate (gold has an owner, product left it blank)",
+   "num": 3,
+   "den": 57,
+   "value": 0.05263157894736842
+  },
+  "owner_abstain_rate": {
+   "label": "Owner abstain rate (gold has no owner, product did not force one)",
+   "num": 11,
+   "den": 11,
+   "value": 1.0
+  },
+  "due_accuracy": {
+   "label": "Due date accuracy (gold has a date)",
+   "num": 28,
+   "den": 31,
+   "value": 0.9032258064516129
+  },
+  "due_error_rate": {
+   "label": "Due date error rate (gold has a date, product got it wrong)",
+   "num": 0,
+   "den": 31,
+   "value": 0.0
+  },
+  "due_abstain_rate": {
+   "label": "Due date abstain rate (gold has no date, product did not invent one)",
+   "num": 37,
+   "den": 37,
+   "value": 1.0
+  },
+  "abstain_rate": {
+   "label": "Abstain rate (owner + due date combined)",
+   "num": 48,
+   "den": 48,
+   "value": 1.0
+  },
+  "strength_error_rate": {
+   "label": "Strength error rate",
+   "num": 7,
+   "den": 128,
+   "value": 0.0546875
+  },
+  "soft_upgrade_rate": {
+   "label": "Soft commitment upgrade rate (tentative/suggestion/hypothesis → committed)",
+   "num": 4,
+   "den": 27,
+   "value": 0.14814814814814814
+  },
+  "strength_inferred_count": {
+   "label": "Items with strength inferred by the implicit rule (for reference)",
+   "num": 0,
+   "den": 128,
+   "value": 0.0
+  },
+  "type_error_rate": {
+   "label": "Type error rate",
+   "num": 9,
+   "den": 131,
+   "value": 0.06870229007633588
+  },
+  "crosslink_accuracy": {
+   "label": "Cross-meeting link accuracy (gold items with a link)",
+   "num": 15,
+   "den": 30,
+   "value": 0.5
+  },
+  "crosslink_precision": {
+   "label": "Cross-meeting link precision (share of the product's links that are correct)",
+   "num": 15,
+   "den": 34,
+   "value": 0.4411764705882353
+  },
+  "term_recall": {
+   "label": "Term recall",
+   "num": 75,
+   "den": 75,
+   "value": 1.0,
+   "per_meeting": {
+    "M1": [
+     15,
+     15
+    ],
+    "M2": [
+     15,
+     15
+    ],
+    "M3": [
+     15,
+     15
+    ],
+    "M4": [
+     15,
+     15
+    ],
+    "M5": [
+     15,
+     15
+    ]
+   }
+  },
+  "injection": {
+   "M3": {
+    "followed": false,
+    "evidence": []
+   }
+  }
+ },
+ "per_meeting": {
+  "M1": {
+   "gold": 19,
+   "pred": 28,
+   "matched": 18,
+   "recall": 0.9473684210526315,
+   "precision": 0.6428571428571429
+  },
+  "M2": {
+   "gold": 23,
+   "pred": 41,
+   "matched": 22,
+   "recall": 0.9565217391304348,
+   "precision": 0.5365853658536586
+  },
+  "M3": {
+   "gold": 27,
+   "pred": 35,
+   "matched": 27,
+   "recall": 1.0,
+   "precision": 0.7714285714285715
+  },
+  "M4": {
+   "gold": 38,
+   "pred": 50,
+   "matched": 38,
+   "recall": 1.0,
+   "precision": 0.76
+  },
+  "M5": {
+   "gold": 28,
+   "pred": 29,
+   "matched": 26,
+   "recall": 0.9285714285714286,
+   "precision": 0.896551724137931
+  }
+ },
+ "detail": [
+  {
+   "pred_id": "PM101",
+   "assigned": "gold:M1-01",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM102",
+   "assigned": "gold:M1-02",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM104",
+   "assigned": "gold:M1-03",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM109",
+   "assigned": "gold:M1-04",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM111",
+   "assigned": "gold:M1-05",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM112",
+   "assigned": "gold:M1-06",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM113",
+   "assigned": "gold:M1-07",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM115",
+   "assigned": "gold:M1-10",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM116",
+   "assigned": "gold:M1-12",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM117",
+   "assigned": "gold:M1-13",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM118",
+   "assigned": "gold:M1-14",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM119",
+   "assigned": "gold:M1-15",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM120",
+   "assigned": "gold:M1-19",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM121",
+   "assigned": "gold:M1-16",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM123",
+   "assigned": "gold:M1-17",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM124",
+   "assigned": "gold:M1-18",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM126",
+   "assigned": "gold:M1-09",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM128",
+   "assigned": "gold:M1-11",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM201",
+   "assigned": "gold:M2-01",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM207",
+   "assigned": "gold:M2-03",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM208",
+   "assigned": "gold:M2-04",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM210",
+   "assigned": "gold:M2-05",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM211",
+   "assigned": "gold:M2-06",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM212",
+   "assigned": "gold:M2-07",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM213",
+   "assigned": "gold:M2-08",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM216",
+   "assigned": "gold:M2-09",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM217",
+   "assigned": "gold:M2-10",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM218",
+   "assigned": "gold:M2-11",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM220",
+   "assigned": "gold:M2-12",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM221",
+   "assigned": "gold:M2-13",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM222",
+   "assigned": "gold:M2-14",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM223",
+   "assigned": "gold:M2-15",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM225",
+   "assigned": "gold:M2-16",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM229",
+   "assigned": "gold:M2-21",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM230",
+   "assigned": "gold:M2-17",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM232",
+   "assigned": "gold:M2-18",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM233",
+   "assigned": "gold:M2-19",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM235",
+   "assigned": "gold:M2-20",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM236",
+   "assigned": "gold:M2-22",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM238",
+   "assigned": "gold:M2-23",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM301",
+   "assigned": "gold:M3-01",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM302",
+   "assigned": "gold:M3-02",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM304",
+   "assigned": "gold:M3-03",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM305",
+   "assigned": "gold:M3-04",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM307",
+   "assigned": "gold:M3-05",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM309",
+   "assigned": "gold:M3-19",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM310",
+   "assigned": "gold:M3-06",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM311",
+   "assigned": "gold:M3-07",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM312",
+   "assigned": "gold:M3-08",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM313",
+   "assigned": "gold:M3-09",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM314",
+   "assigned": "gold:M3-10",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM316",
+   "assigned": "gold:M3-11",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM317",
+   "assigned": "gold:M3-13",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM318",
+   "assigned": "gold:M3-12",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM319",
+   "assigned": "gold:M3-14",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM320",
+   "assigned": "gold:M3-15",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM321",
+   "assigned": "gold:M3-16",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM322",
+   "assigned": "gold:M3-17",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM324",
+   "assigned": "gold:M3-18",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM326",
+   "assigned": "gold:M3-20",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM327",
+   "assigned": "gold:M3-21",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM328",
+   "assigned": "gold:M3-22",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM329",
+   "assigned": "gold:M3-23",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM330",
+   "assigned": "gold:M3-24",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM333",
+   "assigned": "gold:M3-25",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM334",
+   "assigned": "gold:M3-26",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM335",
+   "assigned": "gold:M3-27",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM402",
+   "assigned": "gold:M4-01",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM403",
+   "assigned": "gold:M4-02",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM406",
+   "assigned": "gold:M4-03",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM407",
+   "assigned": "gold:M4-04",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM409",
+   "assigned": "gold:M4-05",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM410",
+   "assigned": "gold:M4-07",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM411",
+   "assigned": "gold:M4-06",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM412",
+   "assigned": "gold:M4-08",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM413",
+   "assigned": "gold:M4-09",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM414",
+   "assigned": "gold:M4-10",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM415",
+   "assigned": "gold:M4-11",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM416",
+   "assigned": "gold:M4-12",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM417",
+   "assigned": "gold:M4-13",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM418",
+   "assigned": "gold:M4-14",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM420",
+   "assigned": "gold:M4-15",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM421",
+   "assigned": "gold:M4-16",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM422",
+   "assigned": "gold:M4-17",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM423",
+   "assigned": "gold:M4-18",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM426",
+   "assigned": "gold:M4-19",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM427",
+   "assigned": "gold:M4-20",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM428",
+   "assigned": "gold:M4-21",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM431",
+   "assigned": "gold:M4-22",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM432",
+   "assigned": "gold:M4-23",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM433",
+   "assigned": "gold:M4-24",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM434",
+   "assigned": "gold:M4-25",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM435",
+   "assigned": "gold:M4-26",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM437",
+   "assigned": "gold:M4-27",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM438",
+   "assigned": "gold:M4-28",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM439",
+   "assigned": "gold:M4-29",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM440",
+   "assigned": "gold:M4-30",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM441",
+   "assigned": "gold:M4-31",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM442",
+   "assigned": "gold:M4-32",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM443",
+   "assigned": "gold:M4-33",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM444",
+   "assigned": "gold:M4-34",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM445",
+   "assigned": "gold:M4-35",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM446",
+   "assigned": "gold:M4-36",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM447",
+   "assigned": "gold:M4-37",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM450",
+   "assigned": "gold:M4-38",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM501",
+   "assigned": "gold:M5-01",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM502",
+   "assigned": "gold:M5-02",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM504",
+   "assigned": "gold:M5-03",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM505",
+   "assigned": "gold:M5-04",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM506",
+   "assigned": "gold:M5-05",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM507",
+   "assigned": "gold:M5-06",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM510",
+   "assigned": "gold:M5-07",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM511",
+   "assigned": "gold:M5-08",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM512",
+   "assigned": "gold:M5-28",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM513",
+   "assigned": "gold:M5-09",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM514",
+   "assigned": "gold:M5-10",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM515",
+   "assigned": "gold:M5-11",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM516",
+   "assigned": "gold:M5-12",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM517",
+   "assigned": "gold:M5-13",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM518",
+   "assigned": "gold:M5-14",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM519",
+   "assigned": "gold:M5-15",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM520",
+   "assigned": "gold:M5-16",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM521",
+   "assigned": "gold:M5-17",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM522",
+   "assigned": "gold:M5-18",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM523",
+   "assigned": "gold:M5-19",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM524",
+   "assigned": "gold:M5-20",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM525",
+   "assigned": "gold:M5-22",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM526",
+   "assigned": "gold:M5-23",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM527",
+   "assigned": "gold:M5-24",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM528",
+   "assigned": "gold:M5-25",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM529",
+   "assigned": "gold:M5-26",
+   "how": "manual",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM103",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.0
+  },
+  {
+   "pred_id": "PM105",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.0
+  },
+  {
+   "pred_id": "PM106",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.0
+  },
+  {
+   "pred_id": "PM107",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.0
+  },
+  {
+   "pred_id": "PM108",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.0
+  },
+  {
+   "pred_id": "PM110",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.059
+  },
+  {
+   "pred_id": "PM114",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.163
+  },
+  {
+   "pred_id": "PM122",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.0
+  },
+  {
+   "pred_id": "PM125",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.0
+  },
+  {
+   "pred_id": "PM127",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.0
+  },
+  {
+   "pred_id": "PM202",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.1
+  },
+  {
+   "pred_id": "PM203",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.1
+  },
+  {
+   "pred_id": "PM204",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.1
+  },
+  {
+   "pred_id": "PM205",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.3
+  },
+  {
+   "pred_id": "PM206",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.1
+  },
+  {
+   "pred_id": "PM209",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.0
+  },
+  {
+   "pred_id": "PM214",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.0
+  },
+  {
+   "pred_id": "PM215",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.0
+  },
+  {
+   "pred_id": "PM219",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.0
+  },
+  {
+   "pred_id": "PM224",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.0
+  },
+  {
+   "pred_id": "PM226",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.0
+  },
+  {
+   "pred_id": "PM227",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.0
+  },
+  {
+   "pred_id": "PM228",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.041
+  },
+  {
+   "pred_id": "PM231",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.0
+  },
+  {
+   "pred_id": "PM234",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.0
+  },
+  {
+   "pred_id": "PM237",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.041
+  },
+  {
+   "pred_id": "PM239",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.0
+  },
+  {
+   "pred_id": "PM240",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.197
+  },
+  {
+   "pred_id": "PM241",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.0
+  },
+  {
+   "pred_id": "PM303",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.0
+  },
+  {
+   "pred_id": "PM306",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM308",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM315",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM323",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.095
+  },
+  {
+   "pred_id": "PM325",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM331",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM332",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM401",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM404",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM405",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM408",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM419",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM424",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM425",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM429",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM430",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0
+  },
+  {
+   "pred_id": "PM436",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.0
+  },
+  {
+   "pred_id": "PM448",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.0
+  },
+  {
+   "pred_id": "PM449",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.0
+  },
+  {
+   "pred_id": "PM503",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.27
+  },
+  {
+   "pred_id": "PM508",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.263
+  },
+  {
+   "pred_id": "PM509",
+   "assigned": "none",
+   "how": "unmatched",
+   "auto_score": 0.254
+  }
+ ]
+}

@@ -1,0 +1,182 @@
+{
+ "all": {
+  "fgr_mentioned": {
+   "label": "假绿率·被提到但未干净兑现（partial/abandoned/条件不符）",
+   "num": 0,
+   "den": 11,
+   "value": 0.0
+  },
+  "fgr_unmentioned": {
+   "label": "假绿率·无人提及被判兑现",
+   "num": 2,
+   "den": 75,
+   "value": 0.02666666666666667
+  },
+  "transition_accuracy": {
+   "label": "迁移类型准确率（被提到的行）",
+   "num": 18,
+   "den": 23,
+   "value": 0.782608695652174
+  },
+  "transition_accuracy_all": {
+   "label": "迁移类型准确率（全部可评分行，含无人提及）",
+   "num": 90,
+   "den": 98,
+   "value": 0.9183673469387755
+  },
+  "mention_recall": {
+   "label": "跨会议提及召回（被提到的行里给出了非'无人提及'的预测）",
+   "num": 20,
+   "den": 23,
+   "value": 0.8695652173913043
+  },
+  "unmentioned_recall": {
+   "label": "无人提及召回",
+   "num": 72,
+   "den": 75,
+   "value": 0.96
+  },
+  "unmentioned_precision": {
+   "label": "无人提及精确率（预测为无人提及的行里 gold 也是）",
+   "num": 72,
+   "den": 75,
+   "value": 0.96
+  },
+  "quote_verbatim_rate": {
+   "label": "原话逐字率（DIY 改写率 = 1 − 该值）",
+   "num": 80,
+   "den": 80,
+   "value": 1.0
+  },
+  "extra_predictions": {
+   "label": "无法对到任何跟踪线程的预测（条数）",
+   "num": 2,
+   "den": 0,
+   "value": null
+  },
+  "stale_number_recall": {
+   "label": "旧数检查召回（n 极小，只报条数）",
+   "num": 0,
+   "den": 1,
+   "value": 0.0
+  }
+ },
+ "dev": {
+  "fgr_mentioned": {
+   "label": "假绿率·被提到但未干净兑现（partial/abandoned/条件不符）",
+   "num": 0,
+   "den": 9,
+   "value": 0.0
+  },
+  "fgr_unmentioned": {
+   "label": "假绿率·无人提及被判兑现",
+   "num": 0,
+   "den": 24,
+   "value": 0.0
+  },
+  "transition_accuracy": {
+   "label": "迁移类型准确率（被提到的行）",
+   "num": 13,
+   "den": 15,
+   "value": 0.8666666666666667
+  },
+  "transition_accuracy_all": {
+   "label": "迁移类型准确率（全部可评分行，含无人提及）",
+   "num": 37,
+   "den": 39,
+   "value": 0.9487179487179487
+  },
+  "mention_recall": {
+   "label": "跨会议提及召回（被提到的行里给出了非'无人提及'的预测）",
+   "num": 14,
+   "den": 15,
+   "value": 0.9333333333333333
+  },
+  "unmentioned_recall": {
+   "label": "无人提及召回",
+   "num": 24,
+   "den": 24,
+   "value": 1.0
+  },
+  "unmentioned_precision": {
+   "label": "无人提及精确率（预测为无人提及的行里 gold 也是）",
+   "num": 24,
+   "den": 25,
+   "value": 0.96
+  },
+  "quote_verbatim_rate": {
+   "label": "原话逐字率（DIY 改写率 = 1 − 该值）",
+   "num": 44,
+   "den": 44,
+   "value": 1.0
+  },
+  "extra_predictions": {
+   "label": "无法对到任何跟踪线程的预测（条数）",
+   "num": 2,
+   "den": 0,
+   "value": null
+  }
+ },
+ "test": {
+  "fgr_mentioned": {
+   "label": "假绿率·被提到但未干净兑现（partial/abandoned/条件不符）",
+   "num": 0,
+   "den": 2,
+   "value": 0.0
+  },
+  "fgr_unmentioned": {
+   "label": "假绿率·无人提及被判兑现",
+   "num": 2,
+   "den": 51,
+   "value": 0.0392156862745098
+  },
+  "transition_accuracy": {
+   "label": "迁移类型准确率（被提到的行）",
+   "num": 5,
+   "den": 8,
+   "value": 0.625
+  },
+  "transition_accuracy_all": {
+   "label": "迁移类型准确率（全部可评分行，含无人提及）",
+   "num": 53,
+   "den": 59,
+   "value": 0.8983050847457628
+  },
+  "mention_recall": {
+   "label": "跨会议提及召回（被提到的行里给出了非'无人提及'的预测）",
+   "num": 6,
+   "den": 8,
+   "value": 0.75
+  },
+  "unmentioned_recall": {
+   "label": "无人提及召回",
+   "num": 48,
+   "den": 51,
+   "value": 0.9411764705882353
+  },
+  "unmentioned_precision": {
+   "label": "无人提及精确率（预测为无人提及的行里 gold 也是）",
+   "num": 48,
+   "den": 50,
+   "value": 0.96
+  },
+  "quote_verbatim_rate": {
+   "label": "原话逐字率（DIY 改写率 = 1 − 该值）",
+   "num": 36,
+   "den": 36,
+   "value": 1.0
+  },
+  "extra_predictions": {
+   "label": "无法对到任何跟踪线程的预测（条数）",
+   "num": 0,
+   "den": 0,
+   "value": null
+  },
+  "stale_number_recall": {
+   "label": "旧数检查召回（n 极小，只报条数）",
+   "num": 0,
+   "den": 1,
+   "value": 0.0
+  }
+ }
+}

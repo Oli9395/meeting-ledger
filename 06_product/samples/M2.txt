@@ -1,0 +1,77 @@
+Meeting: M2 Group Meeting, Week 1 (Robot Learning Group)
+Date: 2026-10-08 (Thursday) 14:00
+Attendees: Zhou Lan, Daniel Ong, Chen Siyuan, Li Muqing, Wang Bo, Priya Nair
+
+[00:00:03] Zhou Lan: Okay, everyone's here, so let's get started. Same routine as usual today, about five minutes each, and raise any questions on the spot. Siyuan, why don't you go first?
+[00:00:13] Chen Siyuan: Sure. On the LumaVLA side, the rank 16 ablation has finished. It's at 68.5% on LIBERO-Spatial, 2.7 points lower than rank 32. Rank 64 is still running, it sat in the queue for two days, and I estimate results should be out over the weekend.
+[00:00:26] Daniel Ong: So going from rank 16 to 32 is a clear jump. Do you still see the same gripper failure pattern?
+[00:00:35] Chen Siyuan: Yeah, gripper failures are still the biggest share, and it's a bit more obvious at rank 16. About 60% of the failures are the object slipping after it's been grasped.
+[00:00:45] Daniel Ong: Interesting. That kind of supports your quantization story, but it's not conclusive yet.
+[00:00:52] Zhou Lan: Then once rank 64 is out, post it in the group chat. No need to wait for group meeting.
+[00:00:58] Chen Siyuan: Okay, I'll post it in the group chat as soon as it's out.
+[00:01:02] Zhou Lan: And Siyuan brought up a question last time, how many seeds to use for LIBERO-Long eval. Let's settle that today. Wang Bo, how many are you using now?
+[00:01:12] Wang Bo: I've been using 3 all along.
+[00:01:15] Li Muqing: I'm using 5, because the variance on long-horizon is huge. With 3 seeds, results sometimes differ by five or six points.
+[00:01:24] Daniel Ong: I'd go with 5. Reviewers will ask about variance anyway, and long-horizon tasks are really noisy.
+[00:01:32] Zhou Lan: Okay, that's decided. From now on, LIBERO-Long uses 5 seeds across the board, and don't put the earlier 3-seed results in the paper for now.
+[00:01:41] Wang Bo: So do I need to rerun the ones I ran before?
+[00:01:46] Zhou Lan: Rerun the ones going into the paper, don't worry about the rest.
+[00:01:51] Wang Bo: Okay.
+[00:01:53] Zhou Lan: Wang Bo, how's your baseline going?
+[00:01:57] Wang Bo: I've got the SimplerEnv environment set up, and both the Google robot and WidowX settings run. I'll get the OpenVLA baseline on SimplerEnv done before next group meeting, running both settings.
+[00:02:10] Zhou Lan: Good.
+[00:02:12] Wang Bo: Also, I have an idea. Right now neither LIBERO nor SimplerEnv really covers Kestrel's kind of bin-picking scenario, so how about we build a new sim benchmark ourselves?
+[00:02:23] Daniel Ong: Hmm, building a benchmark is basically a whole paper by itself. I don't think we have the bandwidth this semester.
+[00:02:33] Zhou Lan: I agree with Dan. We're not building our own benchmark this semester. We'll use LIBERO plus SimplerEnv, and cover bin-picking with the real-robot data from Kestrel. Wang Bo, focus on getting the baseline stable first.
+[00:02:45] Wang Bo: Okay, got it.
+[00:02:47] Zhou Lan: Muqing.
+[00:02:49] Li Muqing: This week I collected 120 demos with teleop, all pick-and-place, with three kinds of objects. But when I checked them, I found that 18 had the gripper open/close state recorded wrong. The gripper's probably loose, and the sensor readings were jumping around.
+[00:03:04] Chen Siyuan: What are the three objects?
+[00:03:08] Li Muqing: A cup, a building block, and a soft plush toy. The plush toy is the hardest because it deforms, so the position isn't judged accurately once the gripper closes.
+[00:03:19] Daniel Ong: How long does one demo take on average?
+[00:03:24] Li Muqing: About forty seconds on average. Adding scene reset, I can collect roughly forty in an hour. I'm using a SpaceMouse, which is a bit steadier than the VR controller, but rotation is harder to control.
+[00:03:37] Zhou Lan: So out of these 120, are the three objects evenly split?
+[00:03:43] Li Muqing: Pretty much, forty each. But half of the 18 bad ones are in the forty plush toy demos.
+[00:03:52] Priya Nair: Yeah, that's the gripper issue Prof. Zhou mentioned. I'll fix the gripper by Friday, I already ordered the replacement screws.
+[00:04:02] Zhou Lan: Thanks Priya. As for those 18 demos, I'll take a look this weekend and decide whether to fix the labels or just delete them.
+[00:04:10] Li Muqing: Okay. One more thing, I've been wondering if we could use part of the DROID data for co-training. I can give it a try, but I'm not sure our storage is enough, DROID is pretty big.
+[00:04:23] Daniel Ong: My hunch is that co-training with DROID will hurt on long-horizon tasks, because the task distribution is quite different from ours. But it's worth a quick check.
+[00:04:35] Li Muqing: Mm, I'll check the data size first.
+[00:04:39] Daniel Ong: Also, maybe someone should write a data card for our dataset. If we ever release it, we'll need one anyway.
+[00:04:49] Zhou Lan: Mm, sure, that's not urgent.
+[00:04:52] Priya Nair: On my side, the second camera mount is done, so we now have a front view and a side view on the Franka. Calibration is finished too.
+[00:05:04] Zhou Lan: What method did you use for calibration?
+[00:05:07] Priya Nair: Standard checkerboard for intrinsics, and hand-eye calibration with an ArUco marker on the end-effector. The reprojection error is under one pixel.
+[00:05:17] Zhou Lan: Good. Put the calibration parameter files in the calibration folder on the shared drive so everyone can use them.
+[00:05:25] Priya Nair: It's already there, I uploaded it yesterday.
+[00:05:29] Chen Siyuan: What's the resolution of the side view?
+[00:05:33] Priya Nair: Same as the front, 640 by 480, 30 fps.
+[00:05:38] Chen Siyuan: Okay, then later on I can just feed both views straight into training.
+[00:05:44] Zhou Lan: Today's paper share is Wang Bo's turn. Go ahead and give us a quick overview, ten minutes max.
+[00:05:51] Wang Bo: Okay. This week I read an arXiv paper on VLA continual learning. Its core point is that when you fine-tune on new tasks with LoRA, performance on old tasks drops less than with full fine-tuning, because the base model's parameters don't change.
+[00:06:08] Daniel Ong: Did they evaluate on real robots or only in simulation?
+[00:06:14] Wang Bo: Only simulation, using the four LIBERO suites, learned sequentially one at a time. They didn't do real robot.
+[00:06:22] Li Muqing: So each time it learns a new suite, is the LoRA adapter shared, or is there one per task?
+[00:06:29] Wang Bo: Each suite gets its own adapter, and at inference you have to know which task it is before you can pick the adapter, so it's actually kind of a shortcut.
+[00:06:39] Zhou Lan: That's an important observation. If you need to know the task at inference time, it's not really continual learning, it's more like multi-task plus a router. When you all read papers, think harder about whether the setting has been quietly simplified.
+[00:06:56] Wang Bo: Yeah, I also think its claim is a bit overblown. But there's one conclusion in the appendix I found useful: once LoRA rank is above 16, forgetting on old tasks basically stops changing.
+[00:07:10] Chen Siyuan: We could compare that with our ablation. We're looking at new-task performance, and it's looking at forgetting.
+[00:07:18] Zhou Lan: Okay, Wang Bo, that was very clear. Next time it's Muqing's turn.
+[00:07:23] Li Muqing: Okay.
+[00:07:25] Daniel Ong: For compute, I'll send the cluster quota script after the maintenance window, so everyone can check their own usage.
+[00:07:34] Wang Bo: What day is the maintenance?
+[00:07:37] Daniel Ong: Not sure yet, IT hasn't announced the date.
+[00:07:42] Zhou Lan: I'm working on the GPU request form, and I'm submitting it next Monday, same as I told Siyuan last time.
+[00:07:49] Zhou Lan: One more thing, everyone in the group has a different eval script right now, so results can't be compared directly. Someone needs to unify them.
+[00:08:00] Li Muqing: Mm...
+[00:08:01] Zhou Lan: Let's set this aside for now and figure out who does it next time.
+[00:08:06] Chen Siyuan: Oh right, should we unify the wandb project into one? Right now everyone creates their own, and it's a pain to find experiments.
+[00:08:14] Zhou Lan: Mm... let's look at that later.
+[00:08:18] Zhou Lan: Oh right, Wang Bo, new students have to finish lab safety training before operating the Franka alone. Have you done it?
+[00:08:26] Wang Bo: Not yet, I'm halfway through the online course. I'll finish it by this Friday.
+[00:08:33] Priya Nair: After you finish, send me the certificate, and I'll add you to the robot access list.
+[00:08:41] Wang Bo: Okay, thanks Priya.
+[00:08:44] Chen Siyuan: Dan, what's the longest a job can run on the cluster right now? My rank 64 one takes about fourteen hours per run.
+[00:08:54] Daniel Ong: The limit is 24 hours per job, so you're fine. Just remember to save checkpoints every few thousand steps, in case the node gets preempted.
+[00:09:05] Chen Siyuan: Okay, right now I'm saving every 2000 steps.
+[00:09:10] Zhou Lan: Okay, that's it for today. Same time next week.

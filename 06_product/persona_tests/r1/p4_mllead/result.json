@@ -1,0 +1,17 @@
+{"persona":"p4_mllead","completed_flow":true,"meeting_seconds":[null,60.8],
+"expected_tasks":9,"found_correct":9,
+"missed":[],
+"false_tasks":["M1 'I'll chase them tomorrow and confirm the signing date' (trivial sub-step, extra; I confirmed it and it later also got a duplicate reconciliation proposal)","M1 duplicate 'I'll send it on that date if legal responds' (rejected)","M1 duplicate Priya 'Please have it ready by EOD Friday' for model card (rejected)"],
+"owner_wrong":2,"due_wrong":1,"edited":2,
+"transitions_expected":6,"transitions_correct":6,
+"bugs":[
+{"severity":"major","what":"Dismissed reconciliation proposals still appear in exported minutes under 上次事项对账, only tagged （未确认）; wrongly-proposed 'spot instances -> 放弃' (tabled open question, not abandoned) is in the export","repro":"M2: dismiss proposals for 'chase them tomorrow' and 'nightly jobs', click export, open .md"},
+{"severity":"minor","what":"Spurious proposal: 'table this again' for an open question was proposed as 放弃 with no owner; 'chase tomorrow' got a second 部分完成 proposal with new date 2026-11-15 conflicting with the correct 11-13 one","repro":"Submit meeting2.txt after meeting1.txt"},
+{"severity":"minor","what":"Owner left blank when imperative from Priya ('Please send...', 'Please have it ready...'); responder's later 'I'll...' became a separate duplicate draft instead of merging","repro":"meeting1.txt"},
+{"severity":"minor","what":"'this week' resolved to Sunday 2026-11-01 / 11-08","repro":"meeting1 Sofia draft"},
+{"severity":"minor","what":"Export decisions/results are fragments, truncated mid-sentence ('We did not get to it'), and labels are Chinese","repro":"export M2"}],
+"ux_issues":["Entire UI is Chinese (buttons, labels, tags, follow-up messages, exported minutes); English-speaking team cannot use or share it as is","Task titles are raw verbatim quotes with 'I'll...' instead of imperative titles; board is hard to scan","Export is Markdown only; no Linear/CSV/JSON/API push","Task board has no ticket IDs, priority, labels","Undo of reconciliation confirm correctly restored board state (positive)","Reconciliation with quoted old vs new evidence and date updates is strong (positive)","Follow-up message is Chinese with English quotes, unusable for an English channel","Thumbs-down reason list and feedback UX fine; feedback modal worked"],
+"sean_ellis":"somewhat",
+"would_use_because":"Cross-meeting reconciliation with quoted evidence, rescheduled-date propagation, and one-click undo saved real tracking effort; extraction accuracy on English Zoom transcripts was good.",
+"would_not_use_because":"All-Chinese interface and exports, no Linear integration or structured export, quote-as-title tasks.",
+"console_errors":[]}

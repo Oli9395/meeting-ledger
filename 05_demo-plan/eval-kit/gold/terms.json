@@ -1,0 +1,9 @@
+{
+ "_meta": {"title": "术语表（术语召回率用）", "status": "v1",
+           "usage": "每个术语是一个列表：第 1 个是标准写法，其余是可接受变体。匹配时统一小写并去掉空格、连字符、下划线后做子串匹配。只统计在该会议转写稿中真实出现过的术语。"},
+ "M1": [["LoRA"], ["LIBERO-Spatial"], ["LIBERO-Long"], ["OpenVLA"], ["π0", "pi0", "pi zero", "派零"], ["FAST tokenizer", "FAST 分词器"], ["action chunking", "动作分块"], ["flow matching"], ["full fine-tuning", "全量微调"], ["A100"], ["Franka"], ["Kestrel"], ["gripper", "夹爪"], ["parameter-efficient fine-tuning", "PEFT", "参数高效微调"], ["progress review"]],
+ "M2": [["SimplerEnv", "Simpler Env"], ["WidowX", "Widow X"], ["Google robot"], ["DROID"], ["co-training", "联合训练"], ["teleop", "teleoperation", "遥操作"], ["SpaceMouse", "Space Mouse"], ["data card"], ["ArUco"], ["hand-eye calibration", "手眼标定"], ["wandb", "W&B", "Weights & Biases"], ["LIBERO-Long"], ["continual learning", "持续学习"], ["adapter"], ["safety training"]],
+ "M3": [["SimplerEnv", "Simpler Env"], ["Google robot"], ["WidowX", "Widow X"], ["visual matching"], ["variant aggregation"], ["numpy"], ["SAPIEN"], ["wandb", "W&B"], ["commit hash"], ["action chunking", "chunking"], ["compounding error"], ["DROID"], ["co-training"], ["RLDS"], ["wrist camera"]],
+ "M4": [["WidowX", "Widow X"], ["conda"], ["PR", "pull request"], ["action chunking", "chunking"], ["open-loop", "开环"], ["sim-to-real"], ["speculative decoding"], ["balanced sampling"], ["Overleaf"], ["backup slides"], ["lab wiki", "wiki"], ["placement mat"], ["A100"], ["Kestrel"], ["π0", "pi0", "派零"]],
+ "M5": [["LeRobot", "Le Robot"], ["RLDS"], ["ROS 2 Humble", "ROS2 Humble", "Humble"], ["ROS 1 Noetic", "ROS1 Noetic", "Noetic"], ["NDA"], ["bin-picking", "bin picking"], ["public cloud"], ["Q4 review"], ["Zoom"], ["SKU"], ["home pose"], ["LIBERO-Spatial"], ["OpenVLA"], ["LoRA"], ["checkpoint"]]
+}

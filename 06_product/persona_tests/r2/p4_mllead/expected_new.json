@@ -1,0 +1,14 @@
+{"meeting3":{"date":"2026-11-09","tasks":[
+{"key":"Sofia: finish model card","owner":"Sofia Reyes","due":"2026-11-18"},
+{"key":"Arjun: rerun reranker benchmark","owner":"Arjun Mehta","due":"2026-11-13"},
+{"key":"Daniel: profile tokenizer preprocessing, post summary","owner":"Daniel Tan","due":"2026-11-16"},
+{"key":"Mei: request labeling quote","owner":"Mei Lin","due":"2026-11-11"},
+{"key":"Sofia: rollout plan for A/B","owner":"Sofia Reyes","due":"2026-11-13"},
+{"key":"Priya: book review meeting with PM","owner":"Priya Nair","due":null}],
+"transitions":[
+{"key":"Sofia A/B config","state":"fulfilled"},
+{"key":"Sofia model card","state":"partial_or_rescheduled"},
+{"key":"Arjun benchmark","state":"partial_or_rescheduled"},
+{"key":"Mei vendor contract","state":"fulfilled"},
+{"key":"Priya launch criteria","state":"fulfilled"},
+{"key":"Daniel CI test","state":"not_mentioned"}]}}

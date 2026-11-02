@@ -1,0 +1,10 @@
+（模拟某产品导出的 M3 转写全文片段——故意包含常见 ASR 错误，用于测试术语召回率）
+王博：跑了一半。Simpler Env 的 Google robot 那组跑完了，Open VLA 在 visual matching 上平均是 0.48 左右；Widow X 那组还没跑，因为 env 里的 num py 版本跟依赖冲突。
+王博：我试了降 numpy，但是那边的萨皮恩又会报错。
+李沐晴：variant 聚合两个指标你都跑了吗？
+王博：我已经记在万 db 的 config 里了。
+Daniel：Just make sure you log the exact commit hash.
+陈思远：action chunking 我初步试了一下……可能是因为它减少了 compounding era。
+李沐晴：Droid co-training 我查了一下，要 1.7 TB。
+李沐晴：放了，GitHub 上有，但是要改成 RL DS 才能用。
+Priya：we could try adding a wrist camera.

@@ -1,0 +1,30 @@
+00:00:05 Priya Nair: Okay, let's get started. Thanks everyone for joining the weekly ML sync.
+00:00:12 Priya Nair: First item is the retrieval model regression we saw on the eval set last week.
+00:00:25 Daniel Tan: Yes, recall@10 dropped about three points after the tokenizer change.
+00:00:38 Priya Nair: Can you dig into that, Daniel? I'd like a root cause before the next sync.
+00:00:46 Daniel Tan: Sure, I'll look into the tokenizer diff and post the findings by EOD Friday.
+00:01:02 Priya Nair: Great. Mei, how is the labeling vendor contract going?
+00:01:10 Mei Lin: Legal still has the draft. I'll chase them tomorrow and confirm the signing date.
+00:01:22 Priya Nair: Please send the signed contract to the team by 2026-11-06.
+00:01:30 Mei Lin: Understood, I'll send it on that date if legal responds.
+00:01:41 Priya Nair: Next, the GPU quota. Arjun, where are we?
+00:01:49 Arjun Mehta: We're at 85 percent of the quarterly quota already, which is a concern.
+00:02:03 Priya Nair: Can you write up a request for extra A100 hours and send it to infra by Wednesday?
+00:02:12 Arjun Mehta: Yes, I'll draft the request and send it to infra next Wednesday.
+00:02:25 Daniel Tan: Should we also migrate the nightly jobs to spot instances?
+00:02:34 Priya Nair: Good idea but that is a bigger discussion. Let's table this until we see the quota decision.
+00:02:45 Daniel Tan: Fine by me.
+00:02:52 Priya Nair: Now, the model card for the ranking model. Sofia, did you start it?
+00:03:01 Sofia Reyes: Not yet. I'll write the first draft of the model card this week.
+00:03:10 Priya Nair: Please have it ready by EOD Friday so legal can review.
+00:03:18 Sofia Reyes: Okay, by EOD Friday works.
+00:03:30 Mei Lin: One more thing, the annotation guideline has an ambiguity around sarcasm.
+00:03:41 Priya Nair: Mei, can you update the guideline and share the new version with the vendor?
+00:03:50 Mei Lin: Sure, I'll update it after the contract is sorted.
+00:04:02 Arjun Mehta: Also the dashboard for latency is flaky.
+00:04:10 Priya Nair: Let's table this, we do not have capacity to fix dashboards this sprint.
+00:04:20 Priya Nair: Daniel, can you also add the regression test for tokenizer changes to CI?
+00:04:29 Daniel Tan: I'll do that once the root cause is clear, probably in two weeks.
+00:04:40 Priya Nair: That works. Anything else from anyone?
+00:04:48 Sofia Reyes: Nothing from me.
+00:04:53 Priya Nair: Great, thanks all. Talk next week.

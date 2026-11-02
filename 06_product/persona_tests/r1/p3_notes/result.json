@@ -1,0 +1,15 @@
+{"persona":"p3_notes","completed_flow":true,"meeting_seconds":[45.7,60.7],"expected_tasks":13,"found_correct":12,
+"missed":["M2: 周五前把slides传共享盘 未作为新任务，被并入上次slides对账提议（可接受，但无新任务/截止日）","M1: 小王说显卡不够要申请 未单独成条（与'问管理员'合并）"],
+"false_tasks":["M1: '数据清洗脚本有bug，思远看看' 与 '思远说周四前能修好' 重复成两条（我驳回了前者）"],
+"owner_wrong":3,"due_wrong":3,"edited":8,"transitions_expected":8,"transitions_correct":7,
+"bugs":[
+{"severity":"major","what":"昵称不归一：负责人输入框直接填 小王/芳姐/小李，不是名单全名 王浩/李芳/李明，需手改；M2 同样（会上对账提议里却显示全名，不一致）","repro":"名单王浩、李芳、李明，速记写 小王 周五 跑baseline，看草稿owner"},
+{"severity":"minor","what":"'老板说 11.10 前要出初稿' 被标时间未锚定，截止日留空，但 11.10 是明确日期；'月底前' 也留空","repro":"M2 第14行 / M1 poster 行"},
+{"severity":"minor","what":"'评测指标 讨论后定用F1' 被当成对未决问题的'已完成'对账提议，负责人显示无负责人，不是任务","repro":"M2 对账区"},
+{"severity":"minor","what":"'poster 思远还没动' 被判为 部分完成或改期，实际是没进展；我驳回，导出纪要里仍列出（未确认）","repro":"M2 对账区"},
+{"severity":"minor","what":"M1 会后追问在 M2 对账后仍显示并可复制，里面还问已放弃的 demo；空负责人显示为 （）","repro":"打开 M1 页看追问"}],
+"ux_issues":["任务标题就是整句原话（含'小王 周五'），任务板标题冗长","速记没有说话人时，'老板说'行有的被识别说话人有的没有，不影响但不统一","导出纪要转写行前缀为 []，看起来像坏掉的复选框","任务板过期任务红标明显但无排序说明","下周三前 解析为 11/04（下周），与口语里'这周三'易混，需人工核对"],
+"sean_ellis":"somewhat",
+"would_use_because":"对账能把上周事项与这周话对上，已完成/改期判断大多对，追问和导出省整理时间；原话可回溯",
+"would_not_use_because":"昵称不归一，每条要手改负责人；任务标题不是动宾短句；速记缺说话人时靠我自己补",
+"console_errors":[]}

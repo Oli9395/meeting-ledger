@@ -1,0 +1,139 @@
+pred_id,gold_id,note
+PM101,M1-01,auto 0.93
+PM102,M1-02,auto 0.91
+PM103,,未匹配；最接近 M1-03（0.25）→ 请填 gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM104,M1-03,auto 1.04
+PM105,M1-04,auto 1.00
+PM106,,未匹配；最接近 M1-03（0.40）→ 请填 gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM107,M1-06,auto 0.86
+PM108,,未匹配；最接近 M1-01（0.22）→ 请填 gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM109,,未匹配；最接近 M1-11（0.13）→ 请填 gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM110,M1-07,auto 1.10
+PM111,M1-08,auto 1.04
+PM112,M1-09,auto 0.89
+PM113,M1-10,auto 0.81
+PM114,M1-11,auto 1.10
+PM115,M1-12,auto 0.90
+PM116,M1-13,auto 1.06
+PM117,M1-15,auto 0.79
+PM118,M1-19,auto 1.00
+PM119,M1-16,auto 0.86
+PM120,M1-18,auto 1.06
+PM201,M2-01,auto 1.03
+PM202,,未匹配；最接近 M2-08（0.29）→ 请填 gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM203,,未匹配；最接近 M2-02（0.30）→ 请填 gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM204,M2-03,auto 0.94
+PM205,M2-05,auto 1.03
+PM206,,未匹配；最接近 M2-05（0.39）→ 请填 gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM207,M2-06,auto 0.75
+PM208,M2-07,auto 0.77
+PM209,M2-09,auto 1.10
+PM210,M2-10,auto 1.01
+PM211,M2-11,auto 1.07
+PM212,M2-12,auto 1.10
+PM213,M2-14,auto 1.10
+PM214,M2-15,auto 0.80
+PM215,,未匹配；最接近 M2-15（0.51）→ 请填 gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM216,M2-16,auto 1.10
+PM217,M2-21,auto 1.10
+PM218,M2-17,auto 1.10
+PM219,,未匹配；最接近 M2-17（0.10）→ 请填 gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM220,M2-19,auto 1.10
+PM221,M2-20,auto 1.10
+PM222,M2-22,auto 1.10
+PM223,,未匹配；最接近 M2-15（0.44）→ 请填 gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM224,M2-23,auto 1.09
+PM301,M3-03,auto 1.10
+PM302,M3-04,auto 1.10
+PM303,M3-13,auto 1.09
+PM304,M3-17,auto 1.09
+PM305,M3-22,auto 1.06
+PM306,M3-24,auto 0.95
+PM307,M3-25,auto 0.88
+PM308,M3-26,auto 1.10
+PM309,M3-27,auto 0.86
+PM310,M3-06,auto 1.06
+PM311,M3-09,auto 1.07
+PM312,M3-15,auto 1.07
+PM313,M3-20,auto 0.97
+PM314,M3-21,auto 0.94
+PM315,,未匹配；最接近 M3-22（0.10）→ 请填 gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM316,M3-01,auto 1.10
+PM317,M3-02,auto 0.74
+PM318,,未匹配；最接近 M3-03（0.14）→ 请填 gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM319,M3-05,auto 1.10
+PM320,M3-08,auto 0.93
+PM321,M3-10,auto 1.06
+PM322,M3-11,auto 1.10
+PM323,M3-12,auto 1.01
+PM324,M3-14,auto 1.04
+PM325,M3-16,auto 1.03
+PM326,M3-18,auto 0.91
+PM327,M3-23,auto 1.10
+PM328,M3-07,auto 1.02
+PM401,M4-01,auto 0.96
+PM402,M4-02,auto 1.10
+PM403,,未匹配；最接近 M4-15（0.20）→ 请填 gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM404,M4-03,auto 1.10
+PM405,M4-04,auto 1.10
+PM406,M4-05,auto 0.86
+PM407,M4-07,auto 0.98
+PM408,M4-08,auto 0.92
+PM409,M4-09,auto 0.83
+PM410,M4-10,auto 1.10
+PM411,M4-11,auto 0.99
+PM412,M4-12,auto 0.84
+PM413,M4-13,auto 1.10
+PM414,M4-14,auto 0.98
+PM415,M4-15,auto 0.98
+PM416,M4-16,auto 1.10
+PM417,M4-17,auto 1.10
+PM418,M4-18,auto 0.76
+PM419,,未匹配；最接近 M4-19（0.49）→ 请填 gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM420,M4-19,auto 1.10
+PM421,M4-20,auto 1.10
+PM422,M4-21,auto 1.10
+PM423,,未匹配；最接近 M4-20（0.15）→ 请填 gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM424,,未匹配；最接近 M4-15（0.21）→ 请填 gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM425,M4-22,auto 1.10
+PM426,M4-24,auto 1.10
+PM427,M4-25,auto 1.10
+PM428,M4-26,auto 1.08
+PM429,M4-27,auto 1.10
+PM430,M4-28,auto 1.10
+PM431,M4-29,auto 1.10
+PM432,M4-30,auto 0.87
+PM433,M4-32,auto 1.10
+PM434,M4-33,auto 1.10
+PM435,M4-34,auto 1.10
+PM436,M4-35,auto 1.10
+PM437,M4-36,auto 1.10
+PM438,M4-37,auto 1.10
+PM439,M4-38,auto 1.10
+PM501,M5-01,auto 0.97
+PM502,M5-02,auto 1.09
+PM503,,未匹配；最接近 M5-01（0.38）→ 请填 gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM504,M5-03,auto 1.09
+PM505,M5-04,auto 0.91
+PM506,M5-06,auto 1.09
+PM507,,未匹配；最接近 M5-06（0.45）→ 请填 gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM508,M5-05,auto 1.10
+PM509,M5-07,auto 1.02
+PM510,M5-08,auto 1.09
+PM511,M5-09,auto 1.10
+PM512,M5-10,auto 1.09
+PM513,M5-11,auto 1.10
+PM514,M5-12,auto 1.10
+PM515,M5-13,auto 1.10
+PM516,M5-14,auto 1.09
+PM517,M5-15,auto 0.97
+PM518,M5-16,auto 1.09
+PM519,M5-17,auto 1.09
+PM520,M5-18,auto 0.79
+PM521,M5-19,auto 1.09
+PM522,M5-20,auto 1.06
+PM523,M5-22,auto 1.05
+PM524,M5-23,auto 1.10
+PM525,M5-25,auto 1.08
+PM526,M5-24,auto 1.09
+PM527,M5-26,auto 1.09

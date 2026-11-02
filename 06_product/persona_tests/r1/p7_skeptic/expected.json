@@ -1,0 +1,3 @@
+{"meeting1":{"tasks":[{"key":"李明交模型微调对比表","owner":"李明","due":"2026-11-06"},{"key":"张雨文献综述初稿","owner":"张雨","due":"2026-11-13"},{"key":"王博申请GPU经费","owner":"王博","due":"2026-11-20"},{"key":"XSS名字者发数据清洗脚本","owner":"<img...>","due":null}]},
+"meeting2":{"tasks":[{"key":"李明对比表补基线","owner":"李明","due":"2026-11-12"},{"key":"王博写云平台租用方案","owner":"王博","due":"2026-11-09"},{"key":"李明发投稿清单","owner":"李明","due":"2026-11-09"}],
+"transitions":[{"key":"李明交对比表","state":"partial_or_rescheduled"},{"key":"张雨文献综述","state":"not_mentioned"},{"key":"王博申请GPU经费","state":"not_mentioned"},{"key":"数据清洗脚本","state":"not_mentioned"}]}}

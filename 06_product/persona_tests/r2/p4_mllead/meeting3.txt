@@ -1,0 +1,22 @@
+00:00:03 Priya Nair: Okay, let's start. Quick round on last week's items.
+00:00:10 Priya Nair: Sofia, is the A/B experiment config ready?
+00:00:16 Sofia Reyes: Yes, I shared it with the team on Thursday, and it's already merged.
+00:00:27 Priya Nair: Great. And the model card?
+00:00:33 Sofia Reyes: Still not done, the evaluation section needs numbers. I'll finish it by 2026-11-18.
+00:00:45 Priya Nair: Okay. Arjun, the reranker serving cost?
+00:00:52 Arjun Mehta: I only got partial numbers, the 100 QPS run crashed. I'll rerun it by EOD Friday.
+00:01:05 Priya Nair: Fine. Mei, the vendor contract?
+00:01:12 Mei Lin: It is signed. I sent it to the team on Wednesday.
+00:01:20 Priya Nair: Excellent. I talked to the product manager myself, and we have the launch criteria in a doc.
+00:01:34 Daniel Tan: I want to flag that the new tokenizer also slows down preprocessing by about 20 percent.
+00:01:45 Priya Nair: Can you profile that, Daniel? Please post a short summary by 2026-11-16.
+00:01:55 Daniel Tan: Yes, I'll profile it and post the summary by 2026-11-16.
+00:02:08 Mei Lin: The vendor asked about a second labeling batch of 5,000 samples.
+00:02:18 Priya Nair: Mei, can you get a quote from them by Wednesday?
+00:02:26 Mei Lin: I'll request the quote and share it by next Wednesday.
+00:02:38 Arjun Mehta: Should we also buy more storage for embeddings?
+00:02:46 Priya Nair: Let's table this until the quota review.
+00:02:55 Priya Nair: Sofia, can you also write the rollout plan for the reranker A/B test?
+00:03:05 Sofia Reyes: Sure, I'll draft the rollout plan by EOD Friday.
+00:03:18 Priya Nair: I'll book the review meeting with the product manager for next week.
+00:03:28 Priya Nair: Okay, that's all. Thanks everyone.

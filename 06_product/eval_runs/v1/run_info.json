@@ -1,0 +1,14 @@
+{
+ "extract_prompt": "extract_v1",
+ "reconcile_prompt": "reconcile_v1",
+ "model": "claude-opus-5-5",
+ "effort": "high",
+ "provider": "claude_cli",
+ "ms_total": {
+  "M1": 87963,
+  "M2": 132690,
+  "M3": 176428,
+  "M4": 193973,
+  "M5": 124704
+ }
+}

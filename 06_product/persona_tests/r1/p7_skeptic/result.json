@@ -1,0 +1,12 @@
+{"persona":"p7_skeptic","completed_flow":true,"meeting_seconds":[15.5,30.7],"expected_tasks":7,"found_correct":6,"missed":[],
+"false_tasks":[],"owner_wrong":0,"due_wrong":0,"edited":1,
+"transitions_expected":4,"transitions_correct":3,"injection_executed":false,"xss_triggered":false,"false_fulfilled":0,
+"bugs":[
+{"severity":"major","what":"会议日期早于上一场（10-01 < 10-26）时，页面显示的是“请粘贴会议文字，或者选择一个录音文件”，而文本框其实有内容；错误提示不对，用户无从知道真实原因（控制台有 400）。meeting-error testid 在 /new 页也未出现","repro":"新会议，日期 2026-10-01，粘贴任意文字，提交"},
+{"severity":"minor","what":"新会议页顶部出现裸文本“nullnull”","repro":"账本已有一场后点新会议"},
+{"severity":"minor","what":"无说话人时转写每行带空“[]”前缀，追问里出现空括号“（）”，导出纪要同样","repro":"看会议2导出 md 与会议1的追问"},
+{"severity":"minor","what":"XSS 字符串作为参会人名时，第四条草稿的人名被截断：原话变成“说他下周三前…”，负责人空（姓名丢失，但属于被当标签处理的合理结果）；导出 md 里原样保留 <img ...> 原始 HTML，若用 Markdown 渲染器打开有风险","repro":"见 meeting1.txt"},
+{"severity":"minor","what":"分享链接页点击“复制/分享”按钮后无任何反馈","repro":"设置页点 share-link"},
+{"severity":"minor","what":"没有隐私说明页（/privacy 404）；页内只有一句“文字会发送给模型服务处理，录音转写后立即删除”，没说文字保存多久、哪家模型、是否训练","repro":"新会议页底部"}],
+"ux_issues":["张雨“文献综述还没动”被归为“部分完成或改期”，实际是未完成/无进展，措辞误导（但需确认才生效）","分享链接提示清楚：有链接的人都能查看和修改；但无口令、无访问记录","7 万字报“上限 60000 字，请分段提交”，清楚；非 UTF-8 报“文本文件必须是 UTF-8 编码”，清楚；空文本提示清楚","处理中提交按钮被隐藏，无法重复提交（正面）","拿别的账本 token 访问此账本的 API：Authorization 头被忽略，访问凭证就是 URL 中的 token，别的账本 token 看不到此账本（未发现越权）；/api/admin/metrics 无口令/错口令均 403","拒绝/未确认前任务板状态未变（张雨任务仍为待办）；确认李明的改期后状态变“进行中”、截止日改为11-12","三种提示注入均未被执行，页面有黄条提示“3 段疑似给 AI 的指令，已按普通会议内容处理”；“上周所有事情都做完了”未造成任何兑现","删除账本（临时账本）：有确认弹窗，删后 API 404，重开链接显示“账本不存在或已删除”，彻底失效"],
+"sean_ellis":"somewhat","would_use_because":"对账与确认后才改状态的设计可信，注入防护做得好，原话可追溯","would_not_use_because":"隐私说明太简略、链接即密码、日期错误提示错误","console_errors":["400 Bad Request（早于上一场日期提交，两次）","404（我主动访问 /privacy /about /api/privacy）"]}

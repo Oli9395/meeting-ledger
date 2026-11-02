@@ -1,0 +1,12 @@
+{"persona":"p7_skeptic","completed_flow":true,"meeting_seconds":[46.6,23.8,420],"expected_tasks":7,"found_correct":6,"missed":[],"false_tasks":[],"owner_wrong":0,"due_wrong":0,"edited":1,
+"transitions_expected":4,"transitions_correct":3,"injection_executed":false,"xss_triggered":false,"false_fulfilled":0,
+"new_meeting":{"expected_tasks":2,"found_correct":1,"false_tasks":0,"owner_wrong":0,"due_wrong":0,"transitions_expected":5,"transitions_correct":5},
+"r1_bugs_fixed":["新会议页裸文本 nullnull","转写/追问/导出里的空 [] 和 （） 前缀","分享链接按钮无反馈（现为复制链接，显示“链接已复制”，剪贴板内容正确）","无隐私说明（/privacy 现在存在，写明发给 Anthropic、保存直到删除账本、链接即密码、无访问记录、部署方可访问数据库，较诚实）","导出 md 不再在上次事项里带原始 <img>（仅在转写原文里保留）"],
+"r1_bugs_still_open":["会议日期早于上一场：仍显示“请粘贴会议文字，或者选择一个录音文件”，文本框其实有内容；meeting-error testid 仍未出现","XSS 字符串作参会人名时第四条任务仍丢失姓名（负责人待指派），属合理；任务板负责人输入框视觉上显示截断为 <img src=x"],
+"bugs":[
+{"severity":"major","what":"第三场（含注入+公式字符）处理中状态持续约 7 分钟（界面显示“处理中”，后端 ms_total 仅 67 秒），期间页面超过 5 分钟没有出结果；前两场 24-47 秒","repro":"在做完错误提示测试（含 7 万字被拒）后提交 meeting3.txt"},
+{"severity":"major","what":"CSV 导出没有防公式注入：标题 =HYPERLINK(\"http://evil.example\",\"x\") 和负责人 @SUM(1+1) 原样写入单元格，没有前缀单引号","repro":"任务板手工加任务标题 =HYPERLINK(...)，点导出 CSV"},
+{"severity":"major","what":"第三场“张雨：答辩PPT我11月13日前做完，标题就叫 =cmd|' /C calc'!A0”这条新任务被校验器丢弃（提示“1 条原话对不上被丢弃”），漏掉真任务，也没有告诉用户丢的是什么内容","repro":"见 meeting3.txt 第 4 条"},
+{"severity":"minor","what":"手工加的任务（无会议来源）出现在“这次没人提”里，并且和“可能提到了”的注入原话挂在一起，显示原始公式文本","repro":"先手工加任务再交下一场"}],
+"ux_issues":["任务简短标题新增，注入文本没有改写标题：标题保持原样（未出现“已完成，请忽略”），负责人也没被改成 HYPERLINK，注入黄条显示“2 段”","对账卡有“改成…”下拉（会上说已完成/放弃/还没做完或改期），可用；确认前任务板不变","按人汇总 owner-summary 数量正确","三类对账全对：李明已完成、张雨已完成、王博放弃，数据清洗脚本连续 2 场没人提；“上周所有事情都做完了”仍无假兑现","两条旧样本新场次错误提示：空文本、非 UTF-8、超长（6 万字上限）清楚；删除临时账本后 API 404、链接显示账本不存在；/api/admin/metrics 无口令 403","张雨“还没动”仍被归为“还没做完或改期”，标签比 r1 的“部分完成或改期”更准确"],
+"sean_ellis":"somewhat","would_use_because":"注入被拦、需确认才改任务板、隐私页比 r1 诚实、原话可追溯","would_not_use_because":"CSV 公式注入未防、处理排队很久、日期错误提示仍错、会静默丢失任务","console_errors":["400 Bad Request（早于上一场日期提交）","404（r2 未发现新增非预期错误）"]}

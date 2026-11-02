@@ -1,0 +1,15 @@
+{"persona":"p5_founder","completed_flow":true,"meeting_seconds":[76,60],
+"expected_tasks":12,"found_correct":12,"missed":[],"false_tasks":[],"owner_wrong":0,"due_wrong":0,"edited":4,
+"transitions_expected":6,"transitions_correct":6,
+"new_meeting":{"expected_tasks":4,"found_correct":4,"false_tasks":0,"owner_wrong":0,"due_wrong":0,"transitions_expected":6,"transitions_correct":5,"meeting_seconds":51},
+"r1_bugs_fixed":["第二场漏新任务(安全文档、招聘帖现已提取)","重复草稿","任务卡只有原话(现有短标题)","误导的红色横幅","损坏文件报错不再暴露ffmpeg/路径，改为'无法读取这个音频文件。文件可能已损坏，请换成 mp3、m4a 或 wav 再试'","第二场转写不再合成3大段(按句分段)"],
+"r1_bugs_still_open":["转写错字仍在(中稿/登陆/开诚会/大状/副盘)，术语表无效","无说话人，每场仍有1-2条待手动指派","转写时间戳成块(第二场多句同一时间)"],
+"bugs":[
+{"severity":"major","what":"r2 第二场录音处理卡在'正在提取任务'超过500秒才完成(r1为84秒；其余运行均<90秒)，进度条无超时提示","repro":"r2账本上传meeting2.m4a，可能与并发有关，未确认"},
+{"severity":"minor","what":"留出会议：'索引上线了吗？上线了，登陆接口现在快多了'被对账为'还没做完或改期'而非已完成(用户可用改成…下拉纠正)","repro":"r2账本第三场"},
+{"severity":"minor","what":"转写错字进入任务标题：'客户线上问题副盘'(应为复盘)；原话引用里夹带说话人名如'阿杰：你周一之前…'","repro":"meeting3.m4a"}],
+"ux_issues":["owner-summary只计未完成任务，可能让人误以为漏了已完成的","CSV中source_quote引号不统一","对账卡增加'改成…'下拉有用，但与确认按钮并列较拥挤","任务标题现可读，owner-summary/导出CSV/隐私页/复制链接均可用"],
+"sean_ellis":"somewhat",
+"would_use_because":"上传录音约1分钟出任务草稿和对账，新任务不再漏，留出样本4/4任务、日期全对",
+"would_not_use_because":"仍需手动指派无说话人的任务；转写错字；偶发处理卡很久；对账偶尔误判",
+"console_errors":[]}

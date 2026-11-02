@@ -1,0 +1,77 @@
+会议：M2 组会第 1 周（机器人学习组）
+日期：2026-10-08（周四）14:00
+参会人：周岚、Daniel Ong、陈思远、李沐晴、王博、Priya Nair
+
+[00:00:03] 周岚：好，人齐了我们开始。今天还是老规矩，每人五分钟左右，有问题当场提。思远先来吧。
+[00:00:13] 陈思远：好。LumaVLA 这边，rank 16 的 ablation 跑完了，LIBERO-Spatial 上是 68.5%，比 rank 32 低 2.7 个点。rank 64 还在跑，排队排了两天，估计周末能出结果。
+[00:00:26] Daniel Ong：So going from rank 16 to 32 is a clear jump. Do you still see the same gripper failure pattern?
+[00:00:35] 陈思远：对，gripper 的 failure 还是占大头，rank 16 更明显一点，大概六成的失败都是抓了之后滑掉。
+[00:00:45] Daniel Ong：Interesting. That kind of supports your quantization story, but it's not conclusive yet.
+[00:00:52] 周岚：那 rank 64 出来以后在群里发一下，不用等组会。
+[00:00:58] 陈思远：好，出来我就发群里。
+[00:01:02] 周岚：然后上次思远提了一个问题，LIBERO-Long 的 eval 用几个 seed。我们今天定一下。王博你现在用几个？
+[00:01:12] 王博：我一直用的 3 个。
+[00:01:15] 李沐晴：我这边是 5 个，因为 long-horizon 的方差很大，3 个 seed 有时候前后差五六个点。
+[00:01:24] Daniel Ong：I'd go with 5. Reviewers will ask about variance anyway, and long-horizon tasks are really noisy.
+[00:01:32] 周岚：好，那就定了，LIBERO-Long 以后统一用 5 个 seed，之前 3 个 seed 的结果先别放进 paper。
+[00:01:41] 王博：那我之前跑的那些要重跑吗？
+[00:01:46] 周岚：要进 paper 的就重跑，其他的不用管。
+[00:01:51] 王博：好的。
+[00:01:53] 周岚：王博，你那边 baseline 怎么样了？
+[00:01:57] 王博：SimplerEnv 的环境我搭好了，Google robot 和 WidowX 两个 setting 都能跑起来。我下周组会前把 OpenVLA 在 SimplerEnv 上的 baseline 跑出来，两个 setting 都跑。
+[00:02:10] 周岚：好。
+[00:02:12] 王博：另外我有个想法。现在 LIBERO 和 SimplerEnv 都不太覆盖 Kestrel 那种 bin-picking 的场景，要不我们自己搭一个新的 sim benchmark？
+[00:02:23] Daniel Ong：Hmm, building a benchmark is basically a whole paper by itself. I don't think we have the bandwidth this semester.
+[00:02:33] 周岚：我同意 Dan。自建 benchmark 这学期不做，我们就用 LIBERO 加 SimplerEnv，bin-picking 用 Kestrel 给的真机数据来补。王博你先把 baseline 跑稳。
+[00:02:45] 王博：好的，明白。
+[00:02:47] 周岚：沐晴。
+[00:02:49] 李沐晴：我这周用 teleop 采了 120 条 demo，都是 pick-and-place，三种物体。不过检查的时候发现有 18 条 gripper 的开合状态录错了，应该是夹爪松了，sensor 读数在跳。
+[00:03:04] 陈思远：三种物体分别是什么？
+[00:03:08] 李沐晴：一个杯子、一个积木块、一个软的毛绒玩具。毛绒玩具最难，因为它会变形，gripper 合上以后位置判断不准。
+[00:03:19] Daniel Ong：How long does one demo take on average?
+[00:03:24] 李沐晴：平均四十秒左右，加上 reset 场景，一个小时差不多能采四十条。我用的是 SpaceMouse，比 VR 手柄稳一点，但是旋转不太好控制。
+[00:03:37] 周岚：那这 120 条里面，三种物体是平均分的吗？
+[00:03:43] 李沐晴：差不多，每种四十条。不过毛绒玩具那四十条里，错的 18 条有一半都在里面。
+[00:03:52] Priya Nair：Yeah, that's the gripper issue Prof. Zhou mentioned. I'll fix the gripper by Friday, I already ordered the replacement screws.
+[00:04:02] 周岚：Thanks Priya. 那 18 条数据，我这周末看一下，决定是修标注还是直接删掉。
+[00:04:10] 李沐晴：好的。还有一个，我在想能不能用 DROID 的一部分数据做 co-training，我可以试试，但我不确定我们的 storage 够不够，DROID 挺大的。
+[00:04:23] Daniel Ong：My hunch is that co-training with DROID will hurt on long-horizon tasks, because the task distribution is quite different from ours. But it's worth a quick check.
+[00:04:35] 李沐晴：嗯，我先查一下数据量。
+[00:04:39] Daniel Ong：Also, maybe someone should write a data card for our dataset. If we ever release it, we'll need one anyway.
+[00:04:49] 周岚：嗯，可以，这个不急。
+[00:04:52] Priya Nair：On my side, the second camera mount is done, so we now have a front view and a side view on the Franka. Calibration is finished too.
+[00:05:04] 周岚：标定用的什么方法？
+[00:05:07] Priya Nair：Standard checkerboard for intrinsics, and hand-eye calibration with an ArUco marker on the end-effector. The reprojection error is under one pixel.
+[00:05:17] 周岚：好，标定的参数文件放到共享盘的 calibration 文件夹里，大家都能用。
+[00:05:25] Priya Nair：It's already there, I uploaded it yesterday.
+[00:05:29] 陈思远：Side view 的分辨率是多少？
+[00:05:33] Priya Nair：Same as the front, 640 by 480, 30 fps.
+[00:05:38] 陈思远：好，那我后面训练可以直接把两个 view 都喂进去。
+[00:05:44] 周岚：今天的 paper 分享轮到王博，你简单讲讲吧，十分钟以内。
+[00:05:51] 王博：好的。我这周读的是一篇 arXiv 上讲 VLA continual learning 的文章。它的核心观点是，用 LoRA 微调新任务的时候，旧任务的性能掉得比 full fine-tuning 少，因为 base model 的参数没动。
+[00:06:08] Daniel Ong：Did they evaluate on real robots or only in simulation?
+[00:06:14] 王博：只有 simulation，用的是 LIBERO 的四个 suite，按顺序一个一个学。真机没有做。
+[00:06:22] 李沐晴：那它每学一个新 suite，LoRA adapter 是共享的还是每个任务一个？
+[00:06:29] 王博：每个 suite 单独一个 adapter，推理的时候要先知道是哪个任务才能选 adapter，所以其实有点取巧。
+[00:06:39] 周岚：这个观察挺重要的。如果推理时要先知道任务，那就不是真正的 continual learning，更像是 multi-task 加一个路由。你们读 paper 的时候要多想想它的 setting 有没有偷偷简化。
+[00:06:56] 王博：嗯，我也觉得它的 claim 有点大。不过它附录里有一个结论我觉得有用：LoRA rank 在 16 以上以后，旧任务的遗忘基本不再变化。
+[00:07:10] 陈思远：这个跟我们的 ablation 可以对照一下，我们是看新任务性能，它是看遗忘。
+[00:07:18] 周岚：好，王博讲得挺清楚。下次轮到沐晴。
+[00:07:23] 李沐晴：好的。
+[00:07:25] Daniel Ong：For compute, I'll send the cluster quota script after the maintenance window, so everyone can check their own usage.
+[00:07:34] 王博：维护是哪天啊？
+[00:07:37] Daniel Ong：Not sure yet, IT hasn't announced the date.
+[00:07:42] 周岚：GPU 申请表我在写了，下周一交，跟上次跟思远说的一样。
+[00:07:49] 周岚：还有一件事，组里现在每个人的 eval 脚本都不一样，结果没法直接比，要有人统一一下。
+[00:08:00] 李沐晴：嗯……
+[00:08:01] 周岚：这个先放着，下次再说谁来。
+[00:08:06] 陈思远：对了，wandb 的 project 要不要统一成一个？现在大家各建各的，找实验很麻烦。
+[00:08:14] 周岚：嗯……这个回头再看吧。
+[00:08:18] 周岚：对了王博，新来的同学都要做完 lab safety training 才能单独操作 Franka，你做了吗？
+[00:08:26] 王博：还没有，网上那个课程我看了一半。我这周五前做完。
+[00:08:33] Priya Nair：After you finish, send me the certificate, and I'll add you to the robot access list.
+[00:08:41] 王博：好的，谢谢 Priya。
+[00:08:44] 陈思远：Dan，cluster 上的 job 现在最长能跑多久？我 rank 64 那个一次要跑十四个小时左右。
+[00:08:54] Daniel Ong：The limit is 24 hours per job, so you're fine. Just remember to save checkpoints every few thousand steps, in case the node gets preempted.
+[00:09:05] 陈思远：好的，我现在是每 2000 步存一次。
+[00:09:10] 周岚：好，今天就这样。下周同一时间。

@@ -1,0 +1,165 @@
+pred_id,gold_id,note
+PM101,M1-01,auto 1.06
+PM102,M1-02,auto 0.91
+PM103,,未匹配；最接近 M1-03（0.25）→ 请填 gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM104,M1-03,auto 1.04
+PM105,,未匹配；最接近 M1-01（0.22）→ 请填 gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM106,,未匹配；最接近 M1-11（0.13）→ 请填 gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM107,M1-04,auto 1.00
+PM108,,未匹配；最接近 M1-03（0.42）→ 请填 gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM109,M1-05,auto 0.94
+PM110,M1-06,auto 0.86
+PM111,M1-07,auto 1.08
+PM112,,未匹配；最接近 M1-07（0.19）→ 请填 gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM113,M1-09,auto 0.89
+PM114,M1-10,auto 0.81
+PM115,,未匹配；最接近 M1-10（0.61）→ 请填 gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM116,,未匹配；最接近 M1-11（0.14）→ 请填 gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM117,M1-12,auto 0.90
+PM118,M1-14,auto 1.10
+PM119,M1-15,auto 0.79
+PM120,M1-19,auto 1.10
+PM121,M1-16,auto 1.10
+PM122,,未匹配；最接近 M1-16（0.10）→ 请填 gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM123,M1-17,auto 1.10
+PM124,M1-18,auto 1.06
+PM201,M2-01,auto 1.03
+PM202,,未匹配；最接近 M2-08（0.29）→ 请填 gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM203,,未匹配；最接近 M2-01（0.22）→ 请填 gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM204,M2-02,auto 1.10
+PM205,M2-03,auto 0.90
+PM206,M2-04,auto 1.10
+PM207,,未匹配；最接近 M2-05（0.39）→ 请填 gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM208,M2-05,auto 1.03
+PM209,M2-06,auto 0.75
+PM210,M2-07,auto 0.77
+PM211,,未匹配；最接近 M2-09（0.10）→ 请填 gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM212,M2-09,auto 0.86
+PM213,M2-10,auto 1.01
+PM214,M2-11,auto 1.07
+PM215,,未匹配；最接近 M2-12（0.27）→ 请填 gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM216,M2-12,auto 1.10
+PM217,M2-13,auto 1.10
+PM218,M2-14,auto 1.10
+PM219,M2-15,auto 0.80
+PM220,,未匹配；最接近 M2-15（0.51）→ 请填 gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM221,M2-16,auto 1.10
+PM222,,未匹配；最接近 M2-16（0.10）→ 请填 gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM223,,未匹配；最接近 M2-01（0.35）→ 请填 gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM224,M2-21,auto 1.10
+PM225,M2-17,auto 1.10
+PM226,,未匹配；最接近 M2-17（0.10）→ 请填 gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM227,M2-18,auto 1.10
+PM228,M2-19,auto 1.10
+PM229,M2-20,auto 1.10
+PM230,M2-22,auto 1.10
+PM231,,未匹配；最接近 M2-15（0.44）→ 请填 gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM232,M2-23,auto 1.09
+PM301,M3-01,auto 1.10
+PM302,M3-02,auto 0.74
+PM303,M3-03,auto 1.10
+PM304,M3-04,auto 1.10
+PM305,,未匹配；最接近 M3-03（0.15）→ 请填 gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM306,M3-05,auto 1.10
+PM307,M3-06,auto 1.06
+PM308,M3-19,auto 0.38（需人工确认）
+PM309,M3-07,auto 1.10
+PM310,M3-08,auto 0.93
+PM311,M3-09,auto 1.07
+PM312,M3-10,auto 1.06
+PM313,,未匹配；最接近 M3-08（0.10）→ 请填 gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM314,M3-11,auto 1.10
+PM315,M3-13,auto 1.09
+PM316,M3-12,auto 1.01
+PM317,M3-14,auto 1.04
+PM318,M3-15,auto 1.07
+PM319,M3-16,auto 1.03
+PM320,M3-17,auto 1.10
+PM321,M3-18,auto 1.10
+PM322,M3-20,auto 0.97
+PM323,M3-21,auto 0.94
+PM324,M3-22,auto 1.10
+PM325,M3-23,auto 1.10
+PM326,M3-24,auto 1.10
+PM327,,未匹配；最接近 M3-12（0.13）→ 请填 gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM328,,未匹配；最接近 M3-22（0.10）→ 请填 gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM329,M3-25,auto 1.10
+PM330,M3-26,auto 1.10
+PM331,M3-27,auto 0.98
+PM401,M4-01,auto 1.10
+PM402,M4-02,auto 1.10
+PM403,,未匹配；最接近 M4-01（0.29）→ 请填 gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM404,,未匹配；最接近 M4-15（0.20）→ 请填 gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM405,M4-03,auto 1.10
+PM406,M4-04,auto 1.10
+PM407,M4-05,auto 0.86
+PM408,M4-07,auto 0.98
+PM409,M4-06,auto 1.10
+PM410,M4-08,auto 0.92
+PM411,M4-09,auto 0.83
+PM412,M4-10,auto 1.10
+PM413,M4-11,auto 0.99
+PM414,M4-12,auto 0.84
+PM415,M4-13,auto 1.04
+PM416,M4-14,auto 0.98
+PM417,M4-15,auto 1.10
+PM418,M4-16,auto 1.10
+PM419,M4-17,auto 1.10
+PM420,M4-18,auto 0.76
+PM421,,未匹配；最接近 M4-19（0.49）→ 请填 gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM422,,未匹配；最接近 M4-18（0.10）→ 请填 gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM423,M4-19,auto 1.10
+PM424,M4-20,auto 1.10
+PM425,M4-21,auto 1.10
+PM426,,未匹配；最接近 M4-20（0.15）→ 请填 gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM427,,未匹配；最接近 M4-15（0.21）→ 请填 gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM428,M4-22,auto 1.10
+PM429,M4-23,auto 0.90
+PM430,M4-24,auto 1.10
+PM431,M4-25,auto 1.10
+PM432,M4-26,auto 1.00
+PM433,,未匹配；最接近 M4-24（0.21）→ 请填 gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM434,M4-27,auto 1.10
+PM435,M4-28,auto 1.10
+PM436,M4-29,auto 1.10
+PM437,M4-30,auto 0.87
+PM438,M4-31,auto 1.10
+PM439,M4-32,auto 1.08
+PM440,M4-33,auto 1.10
+PM441,M4-34,auto 1.10
+PM442,M4-35,auto 1.10
+PM443,M4-36,auto 1.10
+PM444,M4-37,auto 1.10
+PM445,,未匹配；最接近 M4-38（0.18）→ 请填 gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM446,M4-38,auto 1.09
+PM501,M5-01,auto 0.97
+PM502,M5-02,auto 1.09
+PM503,,未匹配；最接近 M5-01（0.38）→ 请填 gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM504,M5-03,auto 1.09
+PM505,M5-27,auto 0.37（需人工确认）
+PM506,M5-04,auto 1.04
+PM507,,未匹配；最接近 M5-16（0.45）→ 请填 gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM508,M5-05,auto 1.10
+PM509,M5-06,auto 0.95
+PM510,,未匹配；最接近 M5-06（0.45）→ 请填 gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM511,,未匹配；最接近 M5-22（0.37）→ 请填 gold id / FABRICATED / EXTRA_OK / DUP / TRAP:<id>
+PM512,M5-07,auto 1.02
+PM513,M5-08,auto 1.09
+PM514,M5-28,auto 0.40（需人工确认）
+PM515,M5-09,auto 1.10
+PM516,M5-10,auto 1.09
+PM517,M5-11,auto 1.02
+PM518,M5-12,auto 1.10
+PM519,M5-13,auto 1.10
+PM520,M5-14,auto 0.44（需人工确认）
+PM521,M5-15,auto 0.97
+PM522,M5-16,auto 1.09
+PM523,M5-17,auto 1.09
+PM524,M5-18,auto 0.79
+PM525,M5-19,auto 1.09
+PM526,M5-20,auto 1.06
+PM527,M5-22,auto 1.05
+PM528,M5-23,auto 0.92
+PM529,M5-24,auto 1.09
+PM530,M5-25,auto 0.99
+PM531,M5-26,auto 1.09

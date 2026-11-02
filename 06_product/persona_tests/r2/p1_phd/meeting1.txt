@@ -1,0 +1,50 @@
+周明远(导师) 00:00:12
+好，我们开始。先看一下上周的 ablation，小陈你先讲。
+陈思雨 00:00:40
+老师，我这周把 diffusion policy 在 real robot 上的 baseline 跑完了，success rate 大概 62%，比 sim 里低很多。
+周明远(导师) 00:01:30
+sim2real gap 这么大？是不是 camera calibration 的问题？
+陈思雨 00:01:52
+有可能，我们 wrist camera 的 extrinsic 上个月换过夹爪之后就没重标过。
+周明远(导师) 00:02:20
+那你这周先把 hand-eye calibration 重新做一遍，下周组会前给我新的 success rate，周五之前能出吗？
+陈思雨 00:02:45
+可以，我周五前做完 recalibration 并重跑 baseline。
+周明远(导师) 00:03:30
+好。小林你的 point cloud encoder 呢？
+林子昂 00:03:48
+我试了 PointNet++ 换成 Point Transformer v3，在 ScanNet 上 mIoU 涨了 2.1，但是显存吃得很厉害。
+周明远(导师) 00:04:30
+显存的问题你想想办法，用 gradient checkpointing 或者 mixed precision，下周一之前把 memory profile 做出来给大家看。
+林子昂 00:04:55
+好的，下周一前出 profile。
+周明远(导师) 00:05:20
+然后 ICRA 的 deadline 是 11 月 15 号，我们要定一下 paper 的分工。我是想 related work 让小陈写。
+陈思雨 00:05:45
+OK 没问题，related work 我来，10 月 30 号前给初稿。
+周明远(导师) 00:06:10
+那我自己写 intro。博三的那位，你的 experiment section 怎么样了？
+我(博三) 00:06:30
+老师，experiment 的 table 1 我跑完了，table 2 的 ablation 还差 occlusion 那一组。
+周明远(导师) 00:07:00
+这个 occlusion ablation 很关键，reviewer 肯定会问。你把它补完，下周三之前，然后顺便把 failure case 的 visualization 也做了。
+我(博三) 00:07:25
+好，occlusion ablation 周三前补完。failure case 的 visualization 我尽量，但是不一定赶得上。
+周明远(导师) 00:07:50
+那 visualization 就放到 11 月 5 号吧。
+我(博三) 00:08:05
+OK，11 月 5 号。
+周明远(导师) 00:08:40
+还有，上次说的 dataset 开源，要有人去整理 README 和 license。
+林子昂 00:09:00
+这个我有空可以看看，不过不确定。
+周明远(导师) 00:09:25
+先不定，大家有空再说。另外上次那个 GPU 集群的配额，谁去问一下管理员？
+陈思雨 00:09:50
+我去问，今天下午就发邮件。
+周明远(导师) 00:10:15
+好。最后，小林你下周再约一下 Prof. Wang 的 meeting，讨论合作的 sim 环境。
+林子昂 00:10:40
+好的，我这周内发邮件约。
+周明远(导师) 00:11:00
+行，今天就到这。

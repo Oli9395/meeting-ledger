@@ -1,0 +1,12 @@
+run_id,run_group,created_at,method,dataset,seed,lora_rank,chunk_size,success_rate,script_version,notes
+r-0930-main-r32,rank32_main_old,2026-09-30,openvla_lora,LIBERO-Spatial,0,32,1,71.2,eval_v1,SYNTHETIC: M1 之前的旧脚本主结果；M4-06 要求重跑；支撑旧数检查 FL-M5-M1-01
+r-1016-chunk8-s0,chunk5,2026-10-16,openvla_lora_chunking,LIBERO-Spatial,0,32,8,72.6,eval_v2,SYNTHETIC: M3-13 chunking 5 seed
+r-1017-chunk8-s1,chunk5,2026-10-17,openvla_lora_chunking,LIBERO-Spatial,1,32,8,76.3,eval_v2,SYNTHETIC: M3-13 chunking 5 seed
+r-1018-chunk8-s2,chunk5,2026-10-18,openvla_lora_chunking,LIBERO-Spatial,2,32,8,71.4,eval_v2,SYNTHETIC: M3-13 chunking 5 seed
+r-1019-chunk8-s3,chunk5,2026-10-19,openvla_lora_chunking,LIBERO-Spatial,3,16,8,75.0,eval_v2,SYNTHETIC 埋点: lora_rank=16 违反 M3-09（后面所有实验都用 rank 32）→ 期望 condition_mismatch
+r-1021-chunk8-s4,chunk5,2026-10-21,openvla_lora_chunking,LIBERO-Spatial,4,32,8,73.7,eval_v2,SYNTHETIC: M3-13 chunking 5 seed
+r-1019-chunk4,chunk_ablation,2026-10-19,openvla_lora_chunking,LIBERO-Spatial,0,32,4,72.4,eval_v2,SYNTHETIC 守规对照组: 不应误报
+r-1019-chunk16,chunk_ablation,2026-10-19,openvla_lora_chunking,LIBERO-Spatial,0,32,16,70.1,eval_v2,SYNTHETIC 守规对照组: 不应误报
+r-1018-widowx-a,widowx_baseline,2026-10-18,openvla_zeroshot,SimplerEnv-WidowX,0,,1,0.30,simplerenv_v1,SYNTHETIC 对照组: 零样本无 lora_rank 列 → 约束不适用
+r-1018-widowx-b,widowx_baseline,2026-10-18,openvla_zeroshot,SimplerEnv-WidowX,1,,1,0.33,simplerenv_v1,SYNTHETIC 对照组: 零样本无 lora_rank 列 → 约束不适用
+r-1019-widowx-c,widowx_baseline,2026-10-19,openvla_zeroshot,SimplerEnv-WidowX,2,,1,0.30,simplerenv_v1,SYNTHETIC 对照组: 零样本无 lora_rank 列 → 约束不适用

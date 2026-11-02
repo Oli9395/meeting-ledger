@@ -1,0 +1,11 @@
+{"meeting3":{"date":"2026-11-16","tasks":[
+{"key":"项目部署到学校服务器","owner":"阿珍","due":"2026-11-25"},
+{"key":"用户使用手册","owner":"小李","due":"2026-11-27"},
+{"key":"答辩演示数据","owner":"大壮","due":"2026-11-28"}],
+"transitions":[
+{"key":"前端首页和商品详情页","state":"fulfilled"},
+{"key":"后端商品发布接口","state":"fulfilled"},
+{"key":"建表SQL","state":"partial_or_rescheduled"},
+{"key":"前端测试用例","state":"partial_or_rescheduled"},
+{"key":"接口测试","state":"partial_or_rescheduled"},
+{"key":"答辩PPT","state":"not_mentioned"}]}}

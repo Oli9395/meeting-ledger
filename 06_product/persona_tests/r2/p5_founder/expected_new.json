@@ -1,0 +1,12 @@
+{"meeting3":{"date":"2026-11-13","tasks":[
+{"key":"准备演示稿","owner":"小陈","due":"2026-11-17"},
+{"key":"搭演示环境","owner":"阿杰","due":"2026-11-16"},
+{"key":"发布新品文章到公众号","owner":"莉莉","due":"2026-11-19"},
+{"key":"写客户线上问题复盘","owner":"大壮","due":"2026-11-20"}],
+"transitions":[
+{"key":"安全说明文档","state":"fulfilled"},
+{"key":"索引上线","state":"fulfilled"},
+{"key":"文章写完","state":"fulfilled"},
+{"key":"招聘帖","state":"partial_or_rescheduled"},
+{"key":"报价页","state":"partial_or_rescheduled"},
+{"key":"给莉莉截图","state":"not_mentioned"}]}}
